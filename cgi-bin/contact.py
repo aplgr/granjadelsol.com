@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 
 import cgi
@@ -7,12 +6,12 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 SMTP_SERVER = "w01e4fea.kasserver.com"
-SMTP_PORT = 465 #587  # Für TLS
+SMTP_PORT = 587 # TLS
 SENDER_EMAIL = "paraguay@andreploeger.com"
 SENDER_PASSWORD = "GRYWVV3wQtt6sQ4WrpkT"
 RECEIVER_EMAIL = "mail@andreploeger.com"
 
-print("Content-type: text/html\n")
+print("Content-type: text/plain\n")
 
 form = cgi.FieldStorage()
 name = form.getvalue("name")
@@ -36,9 +35,10 @@ def send_email(subject, body):
             server.starttls()
             server.login(SENDER_EMAIL, SENDER_PASSWORD)
             server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, msg.as_string())
-            return "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet."
+            return "OK"
     except Exception as e:
-        return f"Fehler beim Senden der E-Mail: {e}"
+        return f"NOK: {e}"
 
 response = send_email(subject, body)
+
 print(response)
