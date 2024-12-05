@@ -1240,10 +1240,10 @@
                                 </div>
                             </div>
 
+
                             <div class="col-lg-12 php-email-form">
-                                <p>Für allgemeine Fragen rund um das Grundstück kannst du uns gerne eine Nachricht über unser
-                                    Kontaktformular schicken. Wir melden uns dann schnellstmöglich bei dir.</p>
-                                <form id="contactForm" role="form" class="php-email-form">
+                                <p>Für allgemeine Fragen rund um das Grundstück kannst du uns gerne eine Nachricht über unser Kontaktformular schicken. Wir melden uns dann schnellstmöglich bei dir.</p>
+                                <form id="contactForm" action="/cgi-bin/contact.py" role="form" class="php-email-form">
                                     <div class="form-row">
                                         <div class="col-lg-6 form-group">
                                             <input type="text" name="name" class="form-control" id="name" placeholder="Dein Name" data-rule="minlen:4" data-msg="Bitte geben Sie mindestens 4 Zeichen ein." />
@@ -1387,28 +1387,6 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('#contactForm').submit(function(event) {
-                event.preventDefault();
-
-                var formData = $(this).serialize();
-                $.ajax({
-                    url: '/cgi-bin/contact.py',
-                    type: 'POST',
-                    data: formData,
-                    success: function(response) {
-                        $('#responseMessage').html(response);
-                        $('#contactForm')[0].reset();
-                    },
-                    error: function(xhr, status, error) {
-                        $('#responseMessage').html('Es gab ein Problem beim Senden der Nachricht. Bitte versuche es später erneut.');
-                    }
-                });
-            });
-        });
-    </script>
 
 </body>
 
