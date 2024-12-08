@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+    =======================================================
+    * Template Name: Mamba - v2.0.1
+    * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ========================================================
+    -->
 
     <title>Granja del Sol - Leben in Paraguay,José Fassardi</title>
     <meta name="descriptison" content="Verkauft wird ein ruhig und ländlich geprägtes 20 Hektar großes Grundstück mit einem 100 m² Haus, welches Weide- und Ackerflächen sowie Waldanteil besitzt. Ideal für Naturfreunde, als Investment oder für Selbstversorger. Zentral gelegen in Jose Fassardi, Guairá, Paraguay.">
@@ -40,13 +48,6 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- =======================================================
-  * Template Name: Mamba - v2.0.1
-  * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -83,38 +84,19 @@
             <nav class="nav-menu float-right d-none d-lg-block">
                 <ul>
                     <li class="active"><a href="#header">Home</a></li>
-                    <!--<li><a href="#about1">Infos</a></li><-->
-                    <li class="drop-down"><a href="">Details zum Objekt</a>
+                    <li class="drop-down"><a href="">Objekt-Details</a>
                         <ul>
-                            <li><a href="#about1">Lage</a></li>
-                            <li><a href="#about2">Grundstück</a></li>
-                            <li><a href="#about3">Haus</a></li>
+                            <li><a href="#location">Lage</a></li>
+                            <li><a href="#property">Grundstück</a></li>
+                            <!-- todo: Infos unter Haus und Grundriss evtl. als einen Punkt zusammenfassen, das Bild des Grundrisses rausnehmen und nur auf Anfrage schicken?! -->
+                            <li><a href="#house">Haus</a></li>
+                            <li><a href="#layout">Grundriss</a></li>
                             <li><a href="#services">weitere Details</a></li>
                         </ul>
                     </li>
                     <li><a href="#portfolio">Fotogalerie</a></li>
-                    <!--
-		  <li><a href="#team">Team</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-		  <-->
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#preis">Preis</a></li>
+                    <li><a href="#price">Preis</a></li>
                     <li><a href="#contact">Kontakt</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
@@ -134,10 +116,13 @@
                     <!-- Slide 1 -->
                     <div class="carousel-item active" style="background-image: url('assets/img/slide/grundstueck_allg.jpg');">
                         <div class="carousel-container">
-                            <div class="carousel-content container">
-                                <h2 class="animated fadeInDown"><span>Leben und Wirken im Grünen:<br>20 Hektar Grundstück mit Haus<br> - in José Fassardi</span></h2> José Fassardi</span></h2>
-                                <!--<p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>-->
+                            <div class="carousel-content container text-center">
+                                <!-- todo: "in Jose Fassardi" oder besser "in Paraguay" ?! -->
+                                <h2 class="animated fadeInDown"><span>Leben und Wirken im Grünen<br/>auf 20 Hektar mit Haus<br/>in José Fassardi</span></h2>
+                                <!--
+                                <p class="animated fadeInUp">...some dummy text...</p>
+                                <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+                                -->
                             </div>
                         </div>
                     </div>
@@ -146,7 +131,7 @@
                     <!--<div class="carousel-item" style="background-image: url('assets/img/slide/panorama.jpg');">
                         <div class="carousel-container">
                             <div class="carousel-content container">
-                                <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                                <p class="animated fadeInUp">...some dummy text - 2...</p>
                                 <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
                             </div>
                         </div>
@@ -157,7 +142,7 @@
             <div class="carousel-container">
               <div class="carousel-content container">
                 <h2 class="animated fadeInDown">Sequi ea ut et est quaerat</h2>
-                <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <p class="animated fadeInUp">...some dummy text - 3...</p>
                 <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
               </div>
             </div>
@@ -244,7 +229,7 @@
         <!-- End About Us Section -->
 
 
-        <section id="about1" class="about">
+        <section id="location" class="about">
             <div class="container">
 
                 <div class="row no-gutters">
@@ -311,7 +296,7 @@
             </div>
         </section>
 
-        <section id="about2" class="about">
+        <section id="property" class="about">
             <div class="container">
 
                 <div class="row no-gutters">
@@ -400,7 +385,7 @@
             </div>
         </section>
 
-        <section id="about3.1" class="about">
+        <section id="house" class="about">
             <div class="container">
 
                 <div class="row no-gutters">
@@ -497,7 +482,7 @@
             </div>
         </section>
 
-        <section id="about3" class="about">
+        <section id="layout" class="about">
             <div class="container">
 
                 <div class="row no-gutters">
@@ -1198,8 +1183,8 @@
                     </div>
                 </section><!-- End Frequently Asked Questions Section -->
 
-                <!-- ======= Preis ======= -->
-                <section id="preis" class="faq section-bg">
+                <!-- ======= Price ======= -->
+                <section id="price" class="faq section-bg">
                     <div class="container">
 
                         <div class="section-title">
@@ -1217,7 +1202,7 @@
                         </div>
                     </div>
                 </section>
-                <!-- End Preis Section -->
+                <!-- End Price Section -->
 
                 <!-- ======= Contact Us Section ======= -->
                 <section id="contact" class="contact">
