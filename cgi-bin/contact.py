@@ -7,9 +7,9 @@ from email.mime.multipart import MIMEMultipart
 
 SMTP_SERVER = "w01e4fea.kasserver.com"
 SMTP_PORT = 587 # TLS
-SENDER_EMAIL = "paraguay@andreploeger.com"
-SENDER_PASSWORD = "GRYWVV3wQtt6sQ4WrpkT"
-RECEIVER_EMAIL = "mail@andreploeger.com"
+SENDER_EMAIL = "mail@granjadelsol.com"
+SENDER_PASSWORD = "kHZT6JBBbic7R7kybSqH"
+RECEIVER_EMAIL = "mail@granjadelsol.com"
 
 print("Content-type: text/plain\n")
 
