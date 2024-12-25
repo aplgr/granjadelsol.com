@@ -7,8 +7,8 @@ from requests.exceptions import RequestException
 TIMEOUT = 0.1
 DEFAULT_LANGUAGE = 'en'
 WEBSITE_URLS = {
-    'de': 'http://www.granjadelsol.com/de/',
-    'en': 'http://www.granjadelsol.com/en/'
+    'de': 'https://www.granjadelsol.com/de/',
+    'en': 'https://www.granjadelsol.com/en/'
 }
 
 COUNTRY_LANGUAGE_MAP = {
