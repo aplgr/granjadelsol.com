@@ -9,13 +9,52 @@ DEFAULT_LANGUAGE = 'en'
 WEBSITE_URLS = {
     'de': 'https://www.granjadelsol.com/de/',
     'en': 'https://www.granjadelsol.com/en/'
+    'es': 'https://www.granjadelsol.com/es/'
+    'pt': 'https://www.granjadelsol.com/pt/'
 }
 
 COUNTRY_LANGUAGE_MAP = {
-    'DE': 'de',
-    'AT': 'de',
-    'CH': 'de',
+    # Deutsch (de)
+    'DE': 'de',  # Deutschland
+    'AT': 'de',  # Österreich
+    'CH': 'de',  # Schweiz
+    'LI': 'de',  # Liechtenstein
+    'LU': 'de',  # Luxemburg (offizielle Sprache)
+
+    # Spanisch (es)
+    'AR': 'es',  # Argentinien
+    'BO': 'es',  # Bolivien
+    'CL': 'es',  # Chile
+    'CO': 'es',  # Kolumbien
+    'CR': 'es',  # Costa Rica
+    'CU': 'es',  # Kuba
+    'DO': 'es',  # Dominikanische Republik
+    'EC': 'es',  # Ecuador
+    'ES': 'es',  # Spanien
+    'GT': 'es',  # Guatemala
+    'HN': 'es',  # Honduras
+    'MX': 'es',  # Mexiko
+    'NI': 'es',  # Nicaragua
+    'PA': 'es',  # Panama
+    'PY': 'es',  # Paraguay
+    'PE': 'es',  # Peru
+    'SV': 'es',  # El Salvador
+    'UY': 'es',  # Uruguay
+    'VE': 'es',  # Venezuela
+    'GQ': 'es',  # Äquatorialguinea (offizielle Sprache)
+
+    # Portugiesisch (pt)
+    'BR': 'pt',  # Brasilien
+    'PT': 'pt',  # Portugal
+    'AO': 'pt',  # Angola
+    'MZ': 'pt',  # Mosambik
+    'GW': 'pt',  # Guinea-Bissau
+    'ST': 'pt',  # São Tomé und Príncipe
+    'CV': 'pt',  # Kap Verde
+    'TL': 'pt',  # Osttimor (Timor-Leste)
+    'MO': 'pt',  # Macau (China, lokale Amtssprache)
 }
+
 
 PROVIDERS = [
     'https://ipapi.co/{}/json/',
@@ -26,7 +65,7 @@ PROVIDERS = [
 def get_user_language():
     lang = os.environ.get('HTTP_ACCEPT_LANGUAGE', '')
     if lang:
-        return lang.split(',')[0].split(';')[0]
+        return lang.split(',')[0].split(';')[0].split('-')[0]
     return None
 
 def get_language_from_ip(ip):
