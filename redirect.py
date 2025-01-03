@@ -8,9 +8,9 @@ TIMEOUT = 0.1
 DEFAULT_LANGUAGE = 'en'
 WEBSITE_URLS = {
     'de': 'https://www.granjadelsol.com/de/',
-    'en': 'https://www.granjadelsol.com/en/'
-    'es': 'https://www.granjadelsol.com/es/'
-    'pt': 'https://www.granjadelsol.com/pt/'
+    'en': 'https://www.granjadelsol.com/en/',
+    'es': 'https://www.granjadelsol.com/es/',
+    'pt': 'https://www.granjadelsol.com/pt/',
 }
 
 COUNTRY_LANGUAGE_MAP = {
