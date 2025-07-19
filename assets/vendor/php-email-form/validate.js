@@ -4,6 +4,25 @@ jQuery(document).ready(function($) {
   //Contact
   $('form.php-email-form').submit(function() {
 
+    // === BEGIN SPAM PROTECTION PATCH ===
+    var honeypot = $(this).find('input[name="name2"]').val();
+    var now = Date.now();
+
+    if (!window.formLoadTime) window.formLoadTime = now;
+    var elapsed = now - window.formLoadTime;
+    if (honeypot && honeypot.trim() !== '' || elapsed < 3000) {
+      $(this).find('.loading').hide();
+      $(this).find('.error-message').hide();
+      $(this).find('.sent-message').show();
+
+      this.reset();
+      $(this).removeClass('was-validated');
+      $(this).find('.validate').hide().empty();
+      $(this).find('.form-control, .form-group').removeClass('is-invalid has-error');
+      return false;
+    }
+    // === END SPAM PROTECTION PATCH ===
+
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
