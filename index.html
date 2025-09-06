@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome · Choose your language</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Multilingual website. You will be redirected to the best matching language.">
+
+    <meta name="site-base" content="/">
+    <link rel="canonical" href="./">
+
+    <link rel="alternate" hreflang="de" href="de/">
+    <link rel="alternate" hreflang="en" href="en/">
+    <link rel="alternate" hreflang="es" href="es/">
+    <link rel="alternate" hreflang="pt" href="pt/">
+    <link rel="alternate" hreflang="x-default" href="./">
+
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=en/">
+    </noscript>
+    <meta name="robots" content="index,follow">
+    <script>
+        (function () {
+            var supported = ["de", "en", "es", "pt"];
+            var baseMeta = document.querySelector('meta[name="site-base"]');
+            var siteBase = (baseMeta && baseMeta.content) || "/";
+            if (siteBase.charAt(0) !== "/") siteBase = "/" + siteBase;
+            if (siteBase.slice(-1) !== "/") siteBase += "/";
+
+            var parts = location.pathname.replace(/^\//, "").split("/");
+            var idx = siteBase === "/" ? 0 : 1;
+            if (parts.length > idx && supported.indexOf(parts[idx]) >= 0) return;
+
+            var manual;
+            try { manual = localStorage.getItem("lang"); } catch (e) { }
+
+            var pref = (manual || (navigator.languages && navigator.languages[0]) || navigator.language || "en").toLowerCase();
+            var code = pref.split("-")[0];
+            var lang = supported.indexOf(code) >= 0 ? code : "en";
+            var target = siteBase + lang + "/" + location.search + location.hash;
+            location.replace(target);
+        })();
+
+        document.addEventListener("click", function (e) {
+            var a = e.target.closest && e.target.closest("a[data-lang]");
+            if (!a) return;
+            var v = a.getAttribute("data-lang");
+            try { localStorage.setItem("lang", v); } catch (err) { }
+        });
+    </script>
+</head>
+
+<body></body>
+
+</html>

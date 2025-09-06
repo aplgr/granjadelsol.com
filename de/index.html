@@ -39,7 +39,14 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <link rel="manifest" href="../assets/img/manifest.json">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    <link rel="canonical" hreflang="de" href="/de/">
+    <link rel="alternate" hreflang="en" href="/en/">
+    <link rel="alternate" hreflang="es" href="/es/">
+    <link rel="alternate" hreflang="pt" href="/pt/">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900"
+        rel="stylesheet">
 
     <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
@@ -54,7 +61,7 @@
         var _paq = window._paq = window._paq || [];
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
-        (function() {
+        (function () {
             var u = "//m.granjadelsol.com/";
             _paq.push(['setTrackerUrl', u + 'matomo.php']);
             _paq.push(['setSiteId', '2']);
@@ -79,10 +86,10 @@
                 <ul>
                     <li class="drop-down"><a href="">Sprache</a>
                         <ul>
-                            <li><a href="../de/index.html">Deutsch</a></li>
-                            <li><a href="../en/index.html">English</a></li>
-                            <li><a href="../es/index.html">Espa&ntilde;ol</a></li>
-                            <li><a href="../pt/index.html">Portugu&ecirc;s</a></li>
+                            <li><a href="../de/index.html" data-lang="de" hreflang="de">Deutsch</a></li>
+                            <li><a href="../en/index.html" data-lang="en" hreflang="en">English</a></li>
+                            <li><a href="../es/index.html" data-lang="es" hreflang="es">Espa&ntilde;ol</a></li>
+                            <li><a href="../pt/index.html" data-lang="pt" hreflang="pt">Portugu&ecirc;s</a></li>
                         </ul>
                     </li>
                     <li class="active"><a href="#header">Home</a></li>
@@ -107,7 +114,8 @@
             <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
                 <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active" style="background-image: url('../assets/img/slide/grundstueck_allg.jpg');">
+                    <div class="carousel-item active"
+                        style="background-image: url('../assets/img/slide/grundstueck_allg.jpg');">
                         <div class="carousel-container">
                             <div class="carousel-content container text-center">
                                 <h2 class="animated fadeInDown">
@@ -132,13 +140,33 @@
                         <h2>Herzlich Willkommen!</h2>
                     </div>
                     <div>
-                        <p class="description">Stellen Sie sich vor, Sie sitzen auf Ihrer Terrasse und erleben drei ganz besondere Momente: den Sonnenaufgang, der die Weiden und das Ybytyruzu-Gebirge in sanftes Licht taucht, den paraguayischen Sonnenuntergang, mit seinen verschiedenen Orange-und Rottönen, oder einen tollen Ausblick auf das Gebirge mit dem höchsten Punkt Paraguays, dem Cerro Tres Kandu.</p>
-                        <p class="description">Auf unserem 20 Hektar großen Grundstück, der Granja del Sol, haben Sie die Möglichkeit, diese Momente jeden Tag zu genießen. Dazu kommen über 300 Sonnentage im Jahr sowie viel Platz um Ihre eigenen Vorstellungen vom Leben in der Natur zu verwirklichen – sei es als Familie, Investor oder Selbstversorger.</p>
-                        <p class="description"><b>Für Familien</b> bietet dieses Grundstück viel Platz, um gemeinsam in der Natur zu leben – sei es für Kinder, Großeltern, Tiere oder einen eigenen Garten. Es ist ein Ort, an dem man die vielfältigen Möglichkeiten der Natur erleben und eigene Projekte umsetzen kann.</p>
-                        <p class="description"><b>Investoren</b> finden hier ein Grundstück mit interessanten Potenzial für zukünftige, nachhaltige Projekte, die sowohl ökologische als auch wirtschaftliche Vorteile bieten. Ob im Bereich der Forstwirtschaft, in kleineren landwirtschaftlichen Vorhaben oder für AgroTourismus und Naherholung – das Grundstück bietet verschiedene Nutzungsmöglichkeiten.</p>
-                        <p class="description"><b>Selbstversorger</b> finden hier reichlich Raum, um ein naturnahes Leben zu führen, eigenes Gemüse anzubauen, Tiere zu halten und die Unabhängigkeit des Landlebens zu genießen. Verschiedene Wasserquellen und der Wald bieten zusätzliche Unterstützung für diese Vorhaben.</p>
-                        <p class="description">Egal, welche Ideen Sie verfolgen – auf der Granja del Sol finden Sie den Raum und die Ruhe, um Ihre Projekte zu verwirklichen und in einer grünen, friedlichen Umgebung zu leben.</p>
-                        <p class="description"> Interessiert? Hier finden Sie weitere Details zum Grundstück und zum Haus.</p>
+                        <p class="description">Stellen Sie sich vor, Sie sitzen auf Ihrer Terrasse und erleben drei ganz
+                            besondere Momente: den Sonnenaufgang, der die Weiden und das Ybytyruzu-Gebirge in sanftes
+                            Licht taucht, den paraguayischen Sonnenuntergang, mit seinen verschiedenen Orange-und
+                            Rottönen, oder einen tollen Ausblick auf das Gebirge mit dem höchsten Punkt Paraguays, dem
+                            Cerro Tres Kandu.</p>
+                        <p class="description">Auf unserem 20 Hektar großen Grundstück, der Granja del Sol, haben Sie
+                            die Möglichkeit, diese Momente jeden Tag zu genießen. Dazu kommen über 300 Sonnentage im
+                            Jahr sowie viel Platz um Ihre eigenen Vorstellungen vom Leben in der Natur zu verwirklichen
+                            – sei es als Familie, Investor oder Selbstversorger.</p>
+                        <p class="description"><b>Für Familien</b> bietet dieses Grundstück viel Platz, um gemeinsam in
+                            der Natur zu leben – sei es für Kinder, Großeltern, Tiere oder einen eigenen Garten. Es ist
+                            ein Ort, an dem man die vielfältigen Möglichkeiten der Natur erleben und eigene Projekte
+                            umsetzen kann.</p>
+                        <p class="description"><b>Investoren</b> finden hier ein Grundstück mit interessanten Potenzial
+                            für zukünftige, nachhaltige Projekte, die sowohl ökologische als auch wirtschaftliche
+                            Vorteile bieten. Ob im Bereich der Forstwirtschaft, in kleineren landwirtschaftlichen
+                            Vorhaben oder für AgroTourismus und Naherholung – das Grundstück bietet verschiedene
+                            Nutzungsmöglichkeiten.</p>
+                        <p class="description"><b>Selbstversorger</b> finden hier reichlich Raum, um ein naturnahes
+                            Leben zu führen, eigenes Gemüse anzubauen, Tiere zu halten und die Unabhängigkeit des
+                            Landlebens zu genießen. Verschiedene Wasserquellen und der Wald bieten zusätzliche
+                            Unterstützung für diese Vorhaben.</p>
+                        <p class="description">Egal, welche Ideen Sie verfolgen – auf der Granja del Sol finden Sie den
+                            Raum und die Ruhe, um Ihre Projekte zu verwirklichen und in einer grünen, friedlichen
+                            Umgebung zu leben.</p>
+                        <p class="description"> Interessiert? Hier finden Sie weitere Details zum Grundstück und zum
+                            Haus.</p>
                     </div>
                 </div>
             </div>
@@ -149,27 +177,39 @@
                 <div class="row no-gutters">
                     <div class="col-lg-6 video-box">
                         <a href="https://maps.app.goo.gl/PPgRJ4K8pMW521oRA" target="_blank">
-                            <img src="../assets/img/Grundstueck_alle/Lage2.jpg" class="img-fluid" alt="Lage in Paraguay" loading="lazy">
+                            <img src="../assets/img/Grundstueck_alle/Lage2.jpg" class="img-fluid" alt="Lage in Paraguay"
+                                loading="lazy">
                         </a>
                     </div>
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="section-title">
                             <h2>Lage</h2>
                             <p>
-                                <p> José Fassardi ist eine kleinere Stadt mit ca. 5100 Einwohner (Stand: 2022) und liegt im Verwaltungsbezirk Guairá.
-                                </p><br>
-                                <p> Das Grundstück liegt nördlich vom Zentrum in einer ruhigen und ländlich geprägten Umgebung, und bietet viel Raum für Entspannung und Natur.
-                                    Es ist über eine Nebenstraße erreichbar, die bei allen Wetterlagen gut befahrbar ist.
-                                    In der unmittelbaren Umgebung befinden sich kleinere Geschäfte (Despensen) für den täglichen Bedarf.</p>
+                            <p> José Fassardi ist eine kleinere Stadt mit ca. 5100 Einwohner (Stand: 2022) und liegt im
+                                Verwaltungsbezirk Guairá.
                             </p><br>
-                            <p>Das Zentrum der Stadt José Fassardi ist nur etwa 2 km entfernt. Dort befinden sich verschiedene Einkaufsmöglichkeiten, ärztliche Einrichtungen sowie die Grund- und weiterführende Schule.
-                                Zudem gibt es eine zentrale Bushaltestelle, von der täglich Busse in verschiedene Richtungen z.B. Villarrica verkehren.
+                            <p> Das Grundstück liegt nördlich vom Zentrum in einer ruhigen und ländlich geprägten
+                                Umgebung, und bietet viel Raum für Entspannung und Natur.
+                                Es ist über eine Nebenstraße erreichbar, die bei allen Wetterlagen gut befahrbar ist.
+                                In der unmittelbaren Umgebung befinden sich kleinere Geschäfte (Despensen) für den
+                                täglichen Bedarf.</p>
                             </p><br>
-                            <p>Alternativ können Sie die vom Grundstück in nur 500m entfernte neu asphaltierte Straße nutzen, um in ca. 40 Minuten mit dem Auto in Planta Urbana (Independencia) zu sein.
-                                Auch die Städte Villarrica und Caazapá sind über gut ausgebaute, asphaltierte Straßen in etwa einer Stunde mit dem Auto zu erreichen. Dort haben Sie Zugang zu weiteren Einkaufsmöglichkeiten, Cooperativen, kulturellen und medizinischen Einrichtungen.</p>
+                            <p>Das Zentrum der Stadt José Fassardi ist nur etwa 2 km entfernt. Dort befinden sich
+                                verschiedene Einkaufsmöglichkeiten, ärztliche Einrichtungen sowie die Grund- und
+                                weiterführende Schule.
+                                Zudem gibt es eine zentrale Bushaltestelle, von der täglich Busse in verschiedene
+                                Richtungen z.B. Villarrica verkehren.
+                            </p><br>
+                            <p>Alternativ können Sie die vom Grundstück in nur 500m entfernte neu asphaltierte Straße
+                                nutzen, um in ca. 40 Minuten mit dem Auto in Planta Urbana (Independencia) zu sein.
+                                Auch die Städte Villarrica und Caazapá sind über gut ausgebaute, asphaltierte Straßen in
+                                etwa einer Stunde mit dem Auto zu erreichen. Dort haben Sie Zugang zu weiteren
+                                Einkaufsmöglichkeiten, Cooperativen, kulturellen und medizinischen Einrichtungen.</p>
                             <br>
-                            <p>Ob Sie nun den Vorteil der Nähe zur Stadt suchen oder die ländliche Ruhe bevorzugen – die Lage des Grundstücks bietet Ihnen eine ausgewogene Mischung aus beidem.
-                                Die Infrastruktur und die Anbindung ermöglichen es, sowohl in der Natur zu leben als auch schnell auf städtische Annehmlichkeiten zurückzugreifen.</p>
+                            <p>Ob Sie nun den Vorteil der Nähe zur Stadt suchen oder die ländliche Ruhe bevorzugen – die
+                                Lage des Grundstücks bietet Ihnen eine ausgewogene Mischung aus beidem.
+                                Die Infrastruktur und die Anbindung ermöglichen es, sowohl in der Natur zu leben als
+                                auch schnell auf städtische Annehmlichkeiten zurückzugreifen.</p>
 
                             </p>
                         </div>
@@ -183,7 +223,8 @@
                         </div>
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-hill"></i></div>
-                            <h4 class="title"><a href="">Direkt am Ybytyruzu-Gebirge mit Blick auf den "Cerro Tres Kandú" </a></h4>
+                            <h4 class="title"><a href="">Direkt am Ybytyruzu-Gebirge mit Blick auf den "Cerro Tres
+                                    Kandú" </a></h4>
                         </div>
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-tick-mark"></i></div>
@@ -224,16 +265,21 @@
                 <div class="row no-gutters">
                     <div class="col-lg-6 video-box">
                         <a href="../assets/img/Grundstueck_alle/Grundstueck.webp" target="_blank">
-                            <img src="../assets/img/Grundstueck_alle/Grundstueck.webp" class="img-fluid" alt="Blick auf das Ybytyruzu-Gebirge" loading="lazy"></a>
+                            <img src="../assets/img/Grundstueck_alle/Grundstueck.webp" class="img-fluid"
+                                alt="Blick auf das Ybytyruzu-Gebirge" loading="lazy"></a>
                     </div>
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="section-title">
                             <h2>Grundstück</h2>
-                            <p>Das Grundstück bietet mit seinen <strong>20 Hektar (200 m x 1000 m)</strong> und seiner praktischen Aufteilung zahlreiche Nutzungsmöglichkeiten.</p>
-                            <p>Es eignet sich hervorragend für verschiedene Projekte – sei es für Landwirtschaft und Tierhaltung, als privates, ruhiges Selbstversorgergrundstück oder für AgroTourismus.</p>
+                            <p>Das Grundstück bietet mit seinen <strong>20 Hektar (200 m x 1000 m)</strong> und seiner
+                                praktischen Aufteilung zahlreiche Nutzungsmöglichkeiten.</p>
+                            <p>Es eignet sich hervorragend für verschiedene Projekte – sei es für Landwirtschaft und
+                                Tierhaltung, als privates, ruhiges Selbstversorgergrundstück oder für AgroTourismus.</p>
                             <br>
-                            <p>Das Grundstück ist vollständig eingezäunt. Um das Haus wurde ein zusätzlicher Zaun gezogen.
-                                Durch die <strong>leichte Hanglage</strong> fließt Wasser schnell ab, wodurch Staunässe vermieden wird.</p>
+                            <p>Das Grundstück ist vollständig eingezäunt. Um das Haus wurde ein zusätzlicher Zaun
+                                gezogen.
+                                Durch die <strong>leichte Hanglage</strong> fließt Wasser schnell ab, wodurch Staunässe
+                                vermieden wird.</p>
                             <br>
                             <p>Die 20 Hektar teilen sich wie folgt auf:
                             </p>
@@ -253,7 +299,8 @@
                             <div class="icon"><i class="icofont-cow-head"></i></div>
                             <h4 class="title"><a href="">Ca. 4.5 Hektar Weidefläche</a></h4>
                             <div class="section-title2">
-                                <p>Unterteilung in kleinere Flächen mit 2 natürlichen Tränken, Schattenunterständen sowie neuen
+                                <p>Unterteilung in kleinere Flächen mit 2 natürlichen Tränken, Schattenunterständen
+                                    sowie neuen
                                     Anpflanzungen</p>
                             </div>
                         </div>
@@ -281,13 +328,15 @@
                         </div>
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-unique-idea"></i></div>
-                            <h4 class="title"><a href="">Ideal für: Selbstversorger, Tourismus, Investment oder als Rückzugsort </a>
+                            <h4 class="title"><a href="">Ideal für: Selbstversorger, Tourismus, Investment oder als
+                                    Rückzugsort </a>
                             </h4>
                         </div>
                     </div>
                     <div class="col-lg-6 video-box">
                         <a href="../assets/img/Grundstueck_alle/location-2.webp" target="_blank">
-                            <img src="../assets/img/Grundstueck_alle/location-2.webp" class="img-fluid" alt="Grenzen Grundstück" loading="lazy">
+                            <img src="../assets/img/Grundstueck_alle/location-2.webp" class="img-fluid"
+                                alt="Grenzen Grundstück" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -299,23 +348,36 @@
                 <div class="row no-gutters">
                     <div class="col-lg-6 video-box">
                         <a href="../assets/img/Grundstueck_alle/Haus.webp" target="_blank">
-                            <img src="../assets/img/Grundstueck_alle/Haus.webp" class="img-fluid" alt="Blick auf das Haus" loading="lazy"></a>
+                            <img src="../assets/img/Grundstueck_alle/Haus.webp" class="img-fluid"
+                                alt="Blick auf das Haus" loading="lazy"></a>
                     </div>
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="section-title">
                             <h2>Das Haus</h2>
-                            <p> Das neu gebaute Haus wurde im <strong>April 2024 fertiggestellt</strong> und wird aktuell von uns bewohnt.
-                                Es umfasst <strong>100 m² Wohnfläche</strong>. Das <strong>gesamte Haus umgiebt eine großzügige 3m breite Terrasse</strong>, welche das Haus vor Sonne und Regen schützt.
-                                Zudem schafft diese eine angenehme Außenzone für Grillabende und Entspannung inklusive einem atemberaubenden Blick auf das Ybytyruzu-Gebirge.
+                            <p> Das neu gebaute Haus wurde im <strong>April 2024 fertiggestellt</strong> und wird
+                                aktuell von uns bewohnt.
+                                Es umfasst <strong>100 m² Wohnfläche</strong>. Das <strong>gesamte Haus umgiebt eine
+                                    großzügige 3m breite Terrasse</strong>, welche das Haus vor Sonne und Regen schützt.
+                                Zudem schafft diese eine angenehme Außenzone für Grillabende und Entspannung inklusive
+                                einem atemberaubenden Blick auf das Ybytyruzu-Gebirge.
                             </p><br>
-                            <p>Die Raumaufteilung im Haus wurde so gestaltet, dass sie den Bedürfnissen für eine moderne Familie gerecht wird.</p>
-                            <p>Das <strong>Schlafzimmer</strong> mit <strong>privatem Bad sowie Zugang zur Terrasse</strong> kann bei Bedarf als separate „Wohneinheit“ genutzt werden.</p>
-                            <p>Das <strong>Kinderzimmer</strong>, das ebenfalls vielseitig genutzt werden kann – etwa als Büro oder Gästezimmer – befindet sich in zentraler Lage und hat direkten Zugang zum Flur sowie zum <strong>Gästebad</strong>.</p>
-                            <p>Der großzügige <strong>Wohn-, Ess- und Kochbereich</strong> hat einen zentralen Ofen und direkten Zugang zur Terrasse – ideal für gemütliche und fröhliche Stunden mit Familie und Freunden in einer hellen, einladenden Atmosphäre.
-                                Direkt an die Küche schließt sich zudem ein praktischer <strong>Abstellraum (Deposito)</strong> an.
+                            <p>Die Raumaufteilung im Haus wurde so gestaltet, dass sie den Bedürfnissen für eine moderne
+                                Familie gerecht wird.</p>
+                            <p>Das <strong>Schlafzimmer</strong> mit <strong>privatem Bad sowie Zugang zur
+                                    Terrasse</strong> kann bei Bedarf als separate „Wohneinheit“ genutzt werden.</p>
+                            <p>Das <strong>Kinderzimmer</strong>, das ebenfalls vielseitig genutzt werden kann – etwa
+                                als Büro oder Gästezimmer – befindet sich in zentraler Lage und hat direkten Zugang zum
+                                Flur sowie zum <strong>Gästebad</strong>.</p>
+                            <p>Der großzügige <strong>Wohn-, Ess- und Kochbereich</strong> hat einen zentralen Ofen und
+                                direkten Zugang zur Terrasse – ideal für gemütliche und fröhliche Stunden mit Familie
+                                und Freunden in einer hellen, einladenden Atmosphäre.
+                                Direkt an die Küche schließt sich zudem ein praktischer <strong>Abstellraum
+                                    (Deposito)</strong> an.
                             </p>
                             </p><br>
-                            <p>Mit einer <strong>Gesamtfläche von 280 m²</strong> bietet das Haus inkl. Terrasse ausreichend Platz für die ganze Familie und ist <strong>sofort bezugsfertig</strong> – ideal für den eignen direkten Einzug oder für eine Vermietung.
+                            <p>Mit einer <strong>Gesamtfläche von 280 m²</strong> bietet das Haus inkl. Terrasse
+                                ausreichend Platz für die ganze Familie und ist <strong>sofort bezugsfertig</strong> –
+                                ideal für den eignen direkten Einzug oder für eine Vermietung.
                             </p><br>
                             <p>Weitere <strong>Ausstattungsmerkmale</strong> sind:</p>
                         </div>
@@ -358,11 +420,13 @@
                         </div>
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-home"></i></div>
-                            <h4 class="title"><a href="">Schiebefenster und Terrassentüren mit Moskitoschutz und Sicherheitsgittern</a></h4>
+                            <h4 class="title"><a href="">Schiebefenster und Terrassentüren mit Moskitoschutz und
+                                    Sicherheitsgittern</a></h4>
                         </div>
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-home"></i></div>
-                            <h4 class="title"><a href="">Sofort bezugsbereit - Möblierte Übergabe nach Absprache möglich </a></h4>
+                            <h4 class="title"><a href="">Sofort bezugsbereit - Möblierte Übergabe nach Absprache möglich
+                                </a></h4>
                         </div>
                     </div>
                 </div>
@@ -377,33 +441,55 @@
                     <div class="col-lg-6 col-md-6 icon-box">
                         <div class="icon"><i class="icofont-home"></i></div>
                         <h4 class="title"><a href="">Gebäude & Elektrik</a></h4>
-                        <p class="description"><strong>Werkzeughütte und Stauraum:</strong> Eine gemauerte Hütte mit praktischem Deposito für Materialien und Ausrüstung.</p>
-                        <p class="description"><strong>Tierhaltung:</strong> Zwei Tierställe sowie ein 2023 neu gebauter Corral mit Platz für 20 Rinder.</p>
-                        <p class="description"><strong>Zufahrten:</strong> Zwei stabile Einfahrten – eine mit einer robusten Betonbrücke, die andere als Wirtschaftsweg.</p>
-                        <p class="description"><strong>Eigene Stromversorgung:</strong> Der eigene 40 KVA-Trafo (Monophase) sorgt für zuverlässige Stromversorgung.</p>
-                        <p class="description"><strong>Kommunikation:</strong> 4G/LTE-Empfang auf dem gesamten Grundstück</p>
+                        <p class="description"><strong>Werkzeughütte und Stauraum:</strong> Eine gemauerte Hütte mit
+                            praktischem Deposito für Materialien und Ausrüstung.</p>
+                        <p class="description"><strong>Tierhaltung:</strong> Zwei Tierställe sowie ein 2023 neu gebauter
+                            Corral mit Platz für 20 Rinder.</p>
+                        <p class="description"><strong>Zufahrten:</strong> Zwei stabile Einfahrten – eine mit einer
+                            robusten Betonbrücke, die andere als Wirtschaftsweg.</p>
+                        <p class="description"><strong>Eigene Stromversorgung:</strong> Der eigene 40 KVA-Trafo
+                            (Monophase) sorgt für zuverlässige Stromversorgung.</p>
+                        <p class="description"><strong>Kommunikation:</strong> 4G/LTE-Empfang auf dem gesamten
+                            Grundstück</p>
                     </div>
                     <div class="col-lg-6 col-md-6 icon-box">
                         <div class="icon"><i class="icofont-water-drop"></i></div>
                         <h4 class="title"><a href="">Wasserversorgung</a></h4>
-                        <p class="description"><strong>Natürliche Quellen:</strong> Zwei Wasserquellen – ein Bach und eine Anbindung an den Fluss "Pirapo".</p>
-                        <p class="description"><strong>Brunnen:</strong> Brunnen am Haus mit Hauswasserwerk und 2000-Liter-Tank. Weiterer Brunnen am Waldrand.</p>
-                        <p class="description"><strong>Städtisches Wasser:</strong> Wasseranschluss bis ans Haus vollständig verlegt.</p>
-                        <p class="description"><strong>Bewässerung:</strong> Ein eigenes Wasserleitungssystem (Wasserzapfstellen) auf einem Teil des Grundstückes ermöglicht einfache Bewässerung und die Versorgung der Tiere.</p>
+                        <p class="description"><strong>Natürliche Quellen:</strong> Zwei Wasserquellen – ein Bach und
+                            eine Anbindung an den Fluss "Pirapo".</p>
+                        <p class="description"><strong>Brunnen:</strong> Brunnen am Haus mit Hauswasserwerk und
+                            2000-Liter-Tank. Weiterer Brunnen am Waldrand.</p>
+                        <p class="description"><strong>Städtisches Wasser:</strong> Wasseranschluss bis ans Haus
+                            vollständig verlegt.</p>
+                        <p class="description"><strong>Bewässerung:</strong> Ein eigenes Wasserleitungssystem
+                            (Wasserzapfstellen) auf einem Teil des Grundstückes ermöglicht einfache Bewässerung und die
+                            Versorgung der Tiere.</p>
                     </div>
                     <div class="col-lg-6 col-md-6 icon-box">
                         <div class="icon"><i class="icofont-flora-flower"></i></div>
                         <h4 class="title"><a href="">Pflanzen & Begrünung</a></h4>
-                        <p class="description"><strong>Nachhaltigkeit:</strong> 2023 wurde eine Aufforstung mit ca. 3000 Bäumen (Lapacho, Curupaý, Yvyra Pyta, Timbo, Cedro und mehr) im Waldbereich durchgeführt.</p>
-                        <p class="description"><strong>Vielfalt an Obstbäumen:</strong> Zahlreiche Obst- und Schattenbäume wurden seit 2023 gepflanzt, u.a. Guaven, Mango, Avocado, Pitanga, versch. Zitrusarten, Birne, Bananen, Maulbeere, Guaviju, Papaya, Himbeeren.</p>
-                        <p class="description"><strong>Zierpflanzen:</strong> Eine bunte Mischung aus Zierpflanzen wurde ebenfalls gepflanzt und soll für eine harmonische und naturnahe Atmosphäre sowie Schatten auf dem Grundstück sorgen. Einige Beispiele sind: Jacaranda, afrikanischer Tulpenbaum, Flammbaum, Sibiperunia, Ceibo, Yvyra Pyta, Hovenia, Inga, Orchideenbaum, Hibiskus, Santa Rita, Orleander, Duranta usw.</p>
+                        <p class="description"><strong>Nachhaltigkeit:</strong> 2023 wurde eine Aufforstung mit ca. 3000
+                            Bäumen (Lapacho, Curupaý, Yvyra Pyta, Timbo, Cedro und mehr) im Waldbereich durchgeführt.
+                        </p>
+                        <p class="description"><strong>Vielfalt an Obstbäumen:</strong> Zahlreiche Obst- und
+                            Schattenbäume wurden seit 2023 gepflanzt, u.a. Guaven, Mango, Avocado, Pitanga, versch.
+                            Zitrusarten, Birne, Bananen, Maulbeere, Guaviju, Papaya, Himbeeren.</p>
+                        <p class="description"><strong>Zierpflanzen:</strong> Eine bunte Mischung aus Zierpflanzen wurde
+                            ebenfalls gepflanzt und soll für eine harmonische und naturnahe Atmosphäre sowie Schatten
+                            auf dem Grundstück sorgen. Einige Beispiele sind: Jacaranda, afrikanischer Tulpenbaum,
+                            Flammbaum, Sibiperunia, Ceibo, Yvyra Pyta, Hovenia, Inga, Orchideenbaum, Hibiskus, Santa
+                            Rita, Orleander, Duranta usw.</p>
                     </div>
                     <div class="col-lg-6 col-md-6 icon-box">
                         <div class="icon"><i class="icofont-unique-idea"></i></div>
                         <h4 class="title"><a href="">Ausbaumöglichkeiten</a></h4>
-                        <p class="description"><strong>Carport:</strong> Der Carport neben dem Haupthaus bietet Raum für Erweiterungen oder eine individuelle Nutzung. Die Bodenplatte ist bereits vorhanden.</p>
-                        <p class="description"><strong>Bungalow im Rohbau:</strong> Ein ca. 49 m² Bungalow wurde bereits im Wohnbereich begonnen – ideal für eine zukünftige Vermietung oder als Gästehaus.</p>
-                        <p class="description"><strong>Zweite Bodenplatte:</strong> Eine zusätzliche Bodenplatte für ein weiteres Gebäude (ca. 100 m²) ist bereits vorhanden – ob für ein Büro, eine Gaststätte oder einen Lagerraum (Tinglado) – es gibt viele Möglichkeiten für Ihre Ideen.</p>
+                        <p class="description"><strong>Carport:</strong> Der Carport neben dem Haupthaus bietet Raum für
+                            Erweiterungen oder eine individuelle Nutzung. Die Bodenplatte ist bereits vorhanden.</p>
+                        <p class="description"><strong>Bungalow im Rohbau:</strong> Ein ca. 49 m² Bungalow wurde bereits
+                            im Wohnbereich begonnen – ideal für eine zukünftige Vermietung oder als Gästehaus.</p>
+                        <p class="description"><strong>Zweite Bodenplatte:</strong> Eine zusätzliche Bodenplatte für ein
+                            weiteres Gebäude (ca. 100 m²) ist bereits vorhanden – ob für ein Büro, eine Gaststätte oder
+                            einen Lagerraum (Tinglado) – es gibt viele Möglichkeiten für Ihre Ideen.</p>
                     </div>
                 </div>
             </div>
@@ -418,7 +504,8 @@
                     <div class="col-lg-12 faq-item">
                         <h4>Gibt es noch weitere Bilder zu dem Grundstück und dem Haus?</h4>
                         <p>Natürlich!
-                            Weitere Bilder zum Grundstück und zu dem Haus finden Sie in unserer <a href="fotos.html">Fotogalerie</a>.
+                            Weitere Bilder zum Grundstück und zu dem Haus finden Sie in unserer <a
+                                href="fotos.html">Fotogalerie</a>.
                         </p>
                     </div>
 
@@ -426,44 +513,60 @@
                         <h4>Für wen ist das Grundstück geeignet?</h4>
                         <p>Aufgrund seiner vielseitigen Möglichkeiten ist das Grundstück interessant für:</p>
                         <ul>
-                            <li>Menschen, die einen sicheren Rückzugsort oder "Plan B" in herausfordernden Zeiten suchen.</li>
+                            <li>Menschen, die einen sicheren Rückzugsort oder "Plan B" in herausfordernden Zeiten
+                                suchen.</li>
                             <li>Menschen, welche sich nach mehr Natur, Ruhe und Freiraum sehnen</li>
-                            <li>Menschen, welche einen Neuanfang wagen oder neue, alternative Wege ausprobieren wollen</li>
+                            <li>Menschen, welche einen Neuanfang wagen oder neue, alternative Wege ausprobieren wollen
+                            </li>
                             <br>
                             <li>Familien oder Menschen, welche eine "Community" gründen wollen</li>
                             <li>Selbstversorger, Bauernhof, Landwirtschaftliche Nutzung </li>
-                            <li>Aufbau Öko-Tourismus, Erholungs-Resort, Herbergen für u.a. Wanderer oder Digitale Nomaden</li>
+                            <li>Aufbau Öko-Tourismus, Erholungs-Resort, Herbergen für u.a. Wanderer oder Digitale
+                                Nomaden</li>
                             <li>Investoren</li>
                         </ul>
                     </div>
                     <div class="col-lg-12 faq-item">
                         <h4>Welche laufenden Kosten kommen auf mich zu?</h4>
                         <p>
-                            Jährlich ist eine <strong>Grundstückssteuer</strong> zu entrichten. Diese wurde für das Jahr 2025 entrichtet und betrug 294.000 PYG (ca. 35 Euro).
-                            <br>Dieser Betrag ist von behördlichen Vorgaben abhängig und kann sich jährlich etwas ändern.
-                            <p>Elektrischen <Strong>Strom</Strong> beziehen wir von staatlichen Versorger ANDE, die dafür 310 PYG (ca. 0,04 Euro) pro kWh berechnet.
-                                Ansonsten fallen keine weiteren laufenden Kosten an. (Stand: 05/2025)
-                            </p>
+                            Jährlich ist eine <strong>Grundstückssteuer</strong> zu entrichten. Diese wurde für das Jahr
+                            2025 entrichtet und betrug 294.000 PYG (ca. 35 Euro).
+                            <br>Dieser Betrag ist von behördlichen Vorgaben abhängig und kann sich jährlich etwas
+                            ändern.
+                        <p>Elektrischen <Strong>Strom</Strong> beziehen wir von staatlichen Versorger ANDE, die dafür
+                            310 PYG (ca. 0,04 Euro) pro kWh berechnet.
+                            Ansonsten fallen keine weiteren laufenden Kosten an. (Stand: 05/2025)
+                        </p>
                     </div>
                     <div class="col-lg-12 faq-item">
                         <h4>Welche Bodenbeschaffenheit hat das Grundstück?</h4>
-                        <p>Das Grundstück verfügt über einen lehmhaltigen und fruchtbaren Boden, der sich hervorragend für landwirtschaftliche Nutzung eignet. Die gute Wasserbindung sorgt besonders in den warmen Sommermonaten für stabile Feuchtigkeit. Im Vergleich zu anderen Regionen in Paraguay, wo Böden mit hohem Sandanteil schnell Wasser verlieren, bietet dieses Grundstück eine besonders vorteilhafte Grundlage für eine effiziente Bewässerung. Zudem wurde das Gemüsebeet bereits mit Mist angereichert, was die Bodenqualität zusätzlich verbessert.</p>
+                        <p>Das Grundstück verfügt über einen lehmhaltigen und fruchtbaren Boden, der sich hervorragend
+                            für landwirtschaftliche Nutzung eignet. Die gute Wasserbindung sorgt besonders in den warmen
+                            Sommermonaten für stabile Feuchtigkeit. Im Vergleich zu anderen Regionen in Paraguay, wo
+                            Böden mit hohem Sandanteil schnell Wasser verlieren, bietet dieses Grundstück eine besonders
+                            vorteilhafte Grundlage für eine effiziente Bewässerung. Zudem wurde das Gemüsebeet bereits
+                            mit Mist angereichert, was die Bodenqualität zusätzlich verbessert.</p>
                     </div>
                     <div class="col-lg-12 faq-item">
                         <h4>Gibt es Nachbarn oder ist das Grundstück abgelegen?</h4>
                         <p>
-                            Das Grundstück befindet sich in einer ländlichen Umgebung. Die beiden angrenzenden Nachbargrundstücke
+                            Das Grundstück befindet sich in einer ländlichen Umgebung. Die beiden angrenzenden
+                            Nachbargrundstücke
                             sind nicht bewohnt. Paraguayische Nachbarschaft gibt es in ca. 200m Entfernung.
-                            In der Umgebung von José Fassardi haben sich zudem vereinzelt deutsche Einwanderer niedergelassen.
+                            In der Umgebung von José Fassardi haben sich zudem vereinzelt deutsche Einwanderer
+                            niedergelassen.
                         </p>
                     </div>
                     <div class="col-lg-12 faq-item">
                         <h4>Gibt es einen Titel für das Grundstück?</h4>
-                        <p>Ja, der Grundstückstitel ist vorhanden. Die Übertragung des Grundstücks ist somit sofort möglich.</p>
+                        <p>Ja, der Grundstückstitel ist vorhanden. Die Übertragung des Grundstücks ist somit sofort
+                            möglich.</p>
                     </div>
                     <div class="col-lg-12 faq-item">
                         <h4>Was genau hat es mit dem „Titel“ auf sich?</h4>
-                        <p>Der Titel ist ein offizielles Dokument, das den rechtmäßigen Eigentümer des Grundstücks ausweist. Er ist notwendig, um das Grundstück zu verkaufen oder zu übertragen. Ohne diesen Titel kann kein rechtswirksamer Verkauf stattfinden.</p>
+                        <p>Der Titel ist ein offizielles Dokument, das den rechtmäßigen Eigentümer des Grundstücks
+                            ausweist. Er ist notwendig, um das Grundstück zu verkaufen oder zu übertragen. Ohne diesen
+                            Titel kann kein rechtswirksamer Verkauf stattfinden.</p>
                     </div>
                     <div class="col-lg-12 faq-item">
                         <h4>Wie läuft der Kaufprozess ab?</h4>
@@ -484,15 +587,22 @@
                                 </ul>
                             </li>
                         </ol>
-                        <p>Nach der vollständigen Zahlung gehört das Grundstück dem neuen Eigentümer, der es sofort nutzen kann. Die Ausstellung des neuen Titels ist eine reine Formalität. Nach Fertigstellung meldet sich die Escribana, damit der neue Eigentümer das Dokument abholen kann.</p>
+                        <p>Nach der vollständigen Zahlung gehört das Grundstück dem neuen Eigentümer, der es sofort
+                            nutzen kann. Die Ausstellung des neuen Titels ist eine reine Formalität. Nach Fertigstellung
+                            meldet sich die Escribana, damit der neue Eigentümer das Dokument abholen kann.</p>
                     </div>
                     <div class="col-lg-12 faq-item">
                         <h4>Welche Gebühren fallen an?</h4>
-                        <p>Die Gebühren der Escribana sind gesetzlich geregelt und richten sich nach dem Kaufpreis. In der Regel sollte man mit ca. 5% der Kaufsumme rechnen. In unserem Fall betrugen die Kosten 4,5%.</p>
+                        <p>Die Gebühren der Escribana sind gesetzlich geregelt und richten sich nach dem Kaufpreis. In
+                            der Regel sollte man mit ca. 5% der Kaufsumme rechnen. In unserem Fall betrugen die Kosten
+                            4,5%.</p>
                     </div>
                     <div class="col-lg-12 faq-item">
                         <h4>Müssen Kaufverträge in Spanisch abgeschlossen werden?</h4>
-                        <p>Ja, in Paraguay müssen Kaufverträge in spanischer Sprache erstellt und von beiden Parteien verstanden werden, um rechtswirksam zu sein. Falls Spanisch nicht sicher beherrscht wird, sollte ein staatlich geprüfter Übersetzer hinzugezogen werden. Die Kosten hierfür sind abhängig von der Anfahrt und der Dauer des Termins.</p>
+                        <p>Ja, in Paraguay müssen Kaufverträge in spanischer Sprache erstellt und von beiden Parteien
+                            verstanden werden, um rechtswirksam zu sein. Falls Spanisch nicht sicher beherrscht wird,
+                            sollte ein staatlich geprüfter Übersetzer hinzugezogen werden. Die Kosten hierfür sind
+                            abhängig von der Anfahrt und der Dauer des Termins.</p>
                     </div>
                 </div>
             </div>
@@ -520,7 +630,8 @@
 
                             <div class="d-flex align-items-center mt-2">
                                 <div class="icon me-2" style=margin-right:10px><i class="icofont-tick-mark"></i></div>
-                                <h4 class="title">Haus sofort bezugsbereit - Möblierte Übergabe nach Absprache möglich</h4>
+                                <h4 class="title">Haus sofort bezugsbereit - Möblierte Übergabe nach Absprache möglich
+                                </h4>
                             </div>
                         </div>
                     </div>
@@ -533,19 +644,25 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 php-email-form">
-                        <p> Interessiert an diesem wunderschönen Objekt oder noch offene Fragen? Sprechen Sie uns an!</p>
+                        <p> Interessiert an diesem wunderschönen Objekt oder noch offene Fragen? Sprechen Sie uns an!
+                        </p>
                         <form id="contactForm" action="../cgi-bin/contact.py" role="form" class="php-email-form">
                             <div class="form-row">
                                 <div class="col-lg-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" data-rule="minlen:4" data-msg="Bitte geben Sie mindestens 4 Zeichen ein." />
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Name"
+                                        data-rule="minlen:4" data-msg="Bitte geben Sie mindestens 4 Zeichen ein." />
                                     <div class="validate"></div>
                                 </div>
                                 <div class="col-lg-6 form-group">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="E-Mail" data-rule="email" data-msg="Bitte geben Sie eine gültige Email-Adresse ein." />
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="E-Mail" data-rule="email"
+                                        data-msg="Bitte geben Sie eine gültige Email-Adresse ein." />
                                     <div class="validate"></div>
                                 </div>
                             </div>
-                            <input type="text" name="name2" id="name2" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+                            <input type="text" name="name2" id="name2" tabindex="-1" autocomplete="off"
+                                style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;"
+                                aria-hidden="true">
                             <div class="form-group">
                                 <div class="selectContainer">
                                     <select name="foundby" class="form-control" data-msg="Bitte wählen Sie aus.">
@@ -561,17 +678,22 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Betreff" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Betreff" data-rule="minlen:4"
+                                    data-msg="Please enter at least 8 chars of subject" />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="message" rows="5" data-msg="Ihre Nachricht" placeholder="Ihre Nachricht"></textarea>
+                                <textarea class="form-control" name="message" rows="5" data-msg="Ihre Nachricht"
+                                    placeholder="Ihre Nachricht"></textarea>
                                 <div class="validate"></div>
                             </div>
                             <div class="mb-3">
                                 <div class="loading">Loading</div>
-                                <div class="error-message">Leider ist etwas schief gegangen. Probieren Sie bitte noch einmal oder kontaktieren Sie über E-Mail: paraguay@andreploeger.com</div>
-                                <div class="sent-message">Ihre Nachricht wurde an uns versendet. Wir melden uns so schnell wie möglich bei Ihnen. Vielen Dank!</div>
+                                <div class="error-message">Leider ist etwas schief gegangen. Probieren Sie bitte noch
+                                    einmal oder kontaktieren Sie über E-Mail: paraguay@andreploeger.com</div>
+                                <div class="sent-message">Ihre Nachricht wurde an uns versendet. Wir melden uns so
+                                    schnell wie möglich bei Ihnen. Vielen Dank!</div>
                             </div>
                             <div class="text-center"><button type="submit">Absenden</button></div>
                         </form>
@@ -583,10 +705,12 @@
     <footer id="footer">
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span><a href="https://andreploeger.com" target="_blank">Andr&eacute; Pl&ouml;ger</a></span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span><a href="https://andreploeger.com" target="_blank">Andr&eacute;
+                            Pl&ouml;ger</a></span></strong>. All Rights Reserved
             </div>
             <div class="credits">
-                Template designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a> | Favicons designed by <a href="https://www.freepik.com/" target="_blank">Freepik.com</a>
+                Template designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a> | Favicons
+                designed by <a href="https://www.freepik.com/" target="_blank">Freepik.com</a>
             </div>
         </div>
     </footer>
@@ -603,6 +727,19 @@
     <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../assets/vendor/aos/aos.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener("click", function (e) {
+            var a = e.target.closest && e.target.closest("a[data-lang]");
+            if (!a) return;
+            try { localStorage.setItem("lang", a.getAttribute("data-lang")); } catch (err) { }
+        });
+        (function () {
+            try {
+                var htmlLang = (document.documentElement.lang || "").toLowerCase().split("-")[0];
+                if (htmlLang) localStorage.setItem("lang", htmlLang);
+            } catch (e) { }
+        })();
+    </script>
 </body>
 
 </html>
