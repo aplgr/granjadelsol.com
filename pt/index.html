@@ -632,8 +632,14 @@
                 <div class="row">
                     <div class="col-lg-12 php-email-form">
                         <p>Interessado neste lindo imóvel ou ainda com dúvidas? Fale conosco!</p>
-                        <form id="contactForm" action="https://api.granjadelsol.com/contact" role="form"
+                        <form x-data="formGuard()" x-init="init()" hx-post="https://api.granjadelsol.com/contact"
+                            hx-ext="json-enc" hx-encoding="json" hx-swap="none"
+                            hx-disabled-elt="button[type=submit], input[type=submit]"
+                            @htmx:configRequest.window="configRequest($event)"
+                            @htmx:beforeRequest.window="beforeRequest($event)"
+                            @htmx:afterRequest.window="afterRequest($event)" action="" method="post"
                             class="php-email-form">
+
                             <div class="form-row">
                                 <div class="col-lg-6 form-group">
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Nome"
@@ -647,7 +653,7 @@
                                     <div class="validate"></div>
                                 </div>
                             </div>
-                            <input type="text" name="name2" id="name2" tabindex="-1" autocomplete="off"
+                            <input type="text" name="website" id="website" tabindex="-1" autocomplete="off"
                                 style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;"
                                 aria-hidden="true">
                             <div class="form-group">
@@ -678,13 +684,13 @@
                             </div>
                             <div class="mb-3">
                                 <div class="loading">Carregando</div>
-                                <div class="error-message">Algo deu errado. Por favor, tente novamente ou entre em
-                                    contato por e-mail: paraguay@andreploeger.com</div>
+                                <div class="error-message">Algo deu errado. Por favor, tente novamente.</div>
                                 <div class="sent-message">Sua mensagem foi enviada. Entraremos em contato o mais breve
                                     possível. Obrigado!</div>
+                                <div class="text-center"><button type="submit">Enviar</button></div>
                             </div>
-                            <div class="text-center"><button type="submit">Enviar</button></div>
                         </form>
+                        <p class="form-status" x-data x-text="$store.fg.status" role="status" aria-live="polite"></p>
                     </div>
                 </div>
             </div>
@@ -715,7 +721,14 @@
     <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../assets/vendor/aos/aos.js"></script>
     <script src="../assets/js/main.js"></script>
+
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="../assets/js/contact.js" type="text/javascript"></script>
+
     <script>
+        // Language Selection
         document.addEventListener("click", function (e) {
             var a = e.target.closest && e.target.closest("a[data-lang]");
             if (!a) return;
@@ -726,6 +739,86 @@
                 var htmlLang = (document.documentElement.lang || "").toLowerCase().split("-")[0];
                 if (htmlLang) localStorage.setItem("lang", htmlLang);
             } catch (e) { }
+        })();
+
+
+        // Contact Form
+        (function () {
+            var form = document.querySelector('form.php-email-form');
+            if (!form) return;
+
+            var boxLoading = form.querySelector('.loading');
+            var boxError = form.querySelector('.error-message');
+            var boxOk = form.querySelector('.sent-message');
+
+            var t0 = Date.now();
+            var challenge = Math.random().toString(36).slice(2);
+
+            function hideAll() {
+                [boxLoading, boxError, boxOk].forEach(function (el) {
+                    if (el) { el.style.display = 'none'; el.textContent = el.classList.contains('error-message') ? '' : el.textContent; }
+                });
+            }
+            function show(el, msg) {
+                if (!el) return;
+                if (typeof msg === 'string') el.textContent = msg;
+                el.style.display = 'block';
+            }
+            function trim(x) { return (x == null ? '' : String(x)).trim(); }
+
+            document.addEventListener('htmx:configRequest', function (e) {
+                if (e.target !== form) return;
+
+                if (!form.checkValidity()) {
+                    e.preventDefault();
+                    form.reportValidity?.();
+                    hideAll();
+                    show(boxError, 'Check your input.');
+                    return;
+                }
+
+                var fd = new FormData(form);
+                var p = e.detail.parameters || (e.detail.parameters = {});
+                p.name = trim(fd.get('name'));
+                p.email = trim(fd.get('email'));
+                p.subject = trim(fd.get('subject')) || document.title;
+                p.message = trim(fd.get('message'));
+                p.website = trim(fd.get('website') || '');
+                p._elapsed_ms = String(Math.max(1, Date.now() - t0));
+                p._js_challenge = challenge;
+
+                hideAll();
+                show(boxLoading);
+            });
+
+            document.addEventListener('htmx:afterRequest', function (e) {
+                if (e.target !== form) return;
+                hideAll();
+
+                var xhr = e.detail.xhr;
+                var status = xhr.status || 0;
+                var data = null;
+                try { data = JSON.parse(xhr.responseText || ''); } catch (_) { }
+
+                if (status >= 200 && status < 300 && data && data.ok) {
+                    show(boxOk);
+                    form.reset();
+                    t0 = Date.now();
+                    return;
+                }
+
+                var msg = (data && data.error) ? data.error :
+                    (status ? ('Error (' + status + ')') : 'network error');
+                show(boxError, msg);
+            });
+
+            document.addEventListener('htmx:sendError', function (e) {
+                if (e.target !== form) return;
+                hideAll();
+                show(boxError, 'network error – please try again later.');
+            });
+
+            hideAll();
         })();
     </script>
 </body>
