@@ -667,7 +667,7 @@
                                     <div class="validate"></div>
                                 </div>
                             </div>
-                            <input type="text" name="name2" id="website" tabindex="-1" autocomplete="off"
+                            <input type="text" name="website" id="website" tabindex="-1" autocomplete="off"
                                 style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;"
                                 aria-hidden="true">
                             <div class="form-group">
@@ -739,6 +739,7 @@
     <script src="../assets/js/contact.js" type="text/javascript"></script>
 
     <script>
+        // Language Selection
         document.addEventListener("click", function (e) {
             var a = e.target.closest && e.target.closest("a[data-lang]");
             if (!a) return;
@@ -751,16 +752,84 @@
             } catch (e) { }
         })();
 
+
+        // Contact Form
         (function () {
+            var form = document.querySelector('form.php-email-form');
+            if (!form) return;
+
+            var boxLoading = form.querySelector('.loading');
+            var boxError = form.querySelector('.error-message');
+            var boxOk = form.querySelector('.sent-message');
+
             var t0 = Date.now();
             var challenge = Math.random().toString(36).slice(2);
+
+            function hideAll() {
+                [boxLoading, boxError, boxOk].forEach(function (el) {
+                    if (el) { el.style.display = 'none'; el.textContent = el.classList.contains('error-message') ? '' : el.textContent; }
+                });
+            }
+            function show(el, msg) {
+                if (!el) return;
+                if (typeof msg === 'string') el.textContent = msg;
+                el.style.display = '';
+            }
+            function trim(x) { return (x == null ? '' : String(x)).trim(); }
+
             document.addEventListener('htmx:configRequest', function (e) {
-                var form = e.target;
-                if (!form || !form.matches || !form.matches('form.php-email-form')) return;
-                var p = e.detail && e.detail.parameters || (e.detail.parameters = {});
+                if (e.target !== form) return;
+
+                if (!form.checkValidity()) {
+                    e.preventDefault();
+                    form.reportValidity?.();
+                    hideAll();
+                    show(boxError, 'Check your input.');
+                    return;
+                }
+
+                var fd = new FormData(form);
+                var p = e.detail.parameters || (e.detail.parameters = {});
+                p.name = trim(fd.get('name'));
+                p.email = trim(fd.get('email'));
+                p.subject = trim(fd.get('subject')) || document.title;
+                p.message = trim(fd.get('message'));
+                p.website = trim(fd.get('website') || '');
                 p._elapsed_ms = String(Math.max(1, Date.now() - t0));
                 p._js_challenge = challenge;
+
+                hideAll();
+                show(boxLoading);
             });
+
+            document.addEventListener('htmx:afterRequest', function (e) {
+                if (e.target !== form) return;
+                hideAll();
+
+                var xhr = e.detail.xhr;
+                var status = xhr.status || 0;
+                var data = null;
+                try { data = JSON.parse(xhr.responseText || ''); } catch (_) { }
+
+                if (status >= 200 && status < 300 && data && data.ok) {
+                    show(boxOk);
+                    form.reset();
+                    t0 = Date.now();
+                    return;
+                }
+
+                var msg = (data && data.error) ? data.error :
+                    (status ? ('Error (' + status + ')') : 'network error');
+                show(boxError, msg);
+            });
+
+            document.addEventListener('htmx:sendError', function (e) {
+                if (e.target !== form) return;
+                hideAll();
+                show(boxError, 'network error – please try again later.');
+            });
+
+            hideAll();
         })();
     </script>
 </body>
