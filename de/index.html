@@ -57,6 +57,10 @@
 
     <link href="../assets/css/style.css" rel="stylesheet">
 
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <script>
         var _paq = window._paq = window._paq || [];
         _paq.push(['trackPageView']);
@@ -646,8 +650,19 @@
                     <div class="col-lg-12 php-email-form">
                         <p> Interessiert an diesem wunderschönen Objekt oder noch offene Fragen? Sprechen Sie uns an!
                         </p>
+                        <!--
                         <form id="contactForm" action="https://api.granjadelsol.com/contact" role="form"
                             class="php-email-form">
+                        -->
+
+                        <form x-data="formGuard()" x-init="init()" hx-post="https://api.granjadelsol.com/contact"
+                            hx-ext="json-enc" hx-encoding="json" hx-swap="none"
+                            hx-disabled-elt="button[type=submit], input[type=submit]"
+                            @htmx:configRequest.window="configRequest($event)"
+                            @htmx:beforeRequest.window="beforeRequest($event)"
+                            @htmx:afterRequest.window="afterRequest($event)" action="" method="post"
+                            class="php-email-form">
+
                             <div class="form-row">
                                 <div class="col-lg-6 form-group">
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Name"
@@ -698,6 +713,7 @@
                             </div>
                             <div class="text-center"><button type="submit">Absenden</button></div>
                         </form>
+                        <p class="form-status" x-data x-text="$store.fg.status" role="status" aria-live="polite"></p>
                     </div>
                 </div>
             </div>
