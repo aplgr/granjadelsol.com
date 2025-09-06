@@ -1,0 +1,11 @@
+Copyright (c) 2025 Andre Ploeger. All rights reserved.
+
+This repository contains proprietary content (text, images, design) owned by the author.
+No permission is granted to copy, modify, distribute, or use any content for any purpose
+other than viewing the deployed website at https://granjadelsol.com.
+
+Third-party components are included under their respective licenses. See:
+- THIRD_PARTY_LICENSES.md
+- assets/vendor/* license files (if any)
+
+For template licensing and commercial usage rights, refer to the vendor’s terms.
