@@ -57,11 +57,6 @@
 
     <link href="../assets/css/style.css" rel="stylesheet">
 
-    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
-    <script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="../assets/js/contact.js" type="text/javascript"></script>
-
     <script>
         var _paq = window._paq = window._paq || [];
         _paq.push(['trackPageView']);
@@ -737,6 +732,12 @@
     <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../assets/vendor/aos/aos.js"></script>
     <script src="../assets/js/main.js"></script>
+
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="../assets/js/contact.js" type="text/javascript"></script>
+
     <script>
         document.addEventListener("click", function (e) {
             var a = e.target.closest && e.target.closest("a[data-lang]");
@@ -748,6 +749,18 @@
                 var htmlLang = (document.documentElement.lang || "").toLowerCase().split("-")[0];
                 if (htmlLang) localStorage.setItem("lang", htmlLang);
             } catch (e) { }
+        })();
+
+        (function () {
+            var t0 = Date.now();
+            var challenge = Math.random().toString(36).slice(2);
+            document.addEventListener('htmx:configRequest', function (e) {
+                var form = e.target;
+                if (!form || !form.matches || !form.matches('form.php-email-form')) return;
+                var p = e.detail && e.detail.parameters || (e.detail.parameters = {});
+                p._elapsed_ms = String(Math.max(1, Date.now() - t0));
+                p._js_challenge = challenge;
+            });
         })();
     </script>
 </body>
