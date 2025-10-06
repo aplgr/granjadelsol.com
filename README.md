@@ -1,40 +1,25 @@
 # granjadelsol.com
 
-Statische, mehrsprachige Website, gehostet via **GitHub Pages**.
+Static, multilingual website hosted via **GitHub Pages**.
 
-**Live:** https://granjadelsol.com
+**Live:** [https://granjadelsol.com](https://granjadelsol.com)
 
-## Struktur
-- `/de/`, `/en/`, `/es/`, `/pt/` – Sprachversionen
-- `/index.html` – Root-Redirect per JS in bevorzugte Sprache
-- `/404.html` – Fallback-Redirect für tiefe URLs
-- `/assets/` – CSS/JS/Bilder
-- `CNAME`, `.nojekyll` – für Pages
+## Structure
 
-## Kontaktformular
-- Frontend: **htmx** (`hx-post` + `json-enc`), optional **Alpine.js** für UI-Status
-- Endpoint: `https://api.granjadelsol.com/contact`
-- CORS (Server): erlaubt `POST, OPTIONS` und relevante **HX-Header**
-- Anti-Spam: **Honeypot** + **Honeytime** (`_elapsed_ms`)
+* `/de/`, `/en/`, `/es/`, `/pt/` – language versions
+* `/index.html` – root redirect via JS to the preferred language
+* `/404.html` – fallback redirect for deep URLs
+* `/assets/` – CSS/JS/images
+* `CNAME`, `.nojekyll` – for Pages
 
-## Lokal entwickeln
-```bash
-# statisch serven
-python3 -m http.server 8080
-# dann im Browser: http://localhost:8080/de/ (oder en/es/pt)
-```
+## Contact form
 
-## Deploy
-- **Settings → Pages** → Source: `main` / `(root)`
-- **Custom Domain:** `granjadelsol.com` (legt die Datei `CNAME` an)
-- **Enforce HTTPS** aktivieren
+* Frontend: **htmx** (`hx-post` + `json-enc`), optional **Alpine.js** for UI state
+* Endpoint: `https://api.granjadelsol.com/contact`
+* CORS (server): allow `POST, OPTIONS` and relevant **HX** headers
+* Anti-spam: **Honeypot** + **Honeytime** (`_elapsed_ms`)
 
-## SEO
-- `sitemap.xml` im Repo-Root
-- Auf jeder Sprach-Startseite: `<link rel="alternate" hreflang="…">` gegenseitig setzen + `canonical`
-- `404.html`: `noindex,follow`
-- `robots.txt` verweist auf die Sitemap
+## Legal / Licenses
 
-## Rechtliches / Lizenzen
-- Eigene Inhalte (Bilder, Texte): © André Plöger, **alle Rechte vorbehalten**.
-- Drittkomponenten siehe `THIRD_PARTY_LICENSES.md`.
+* Own content (images, text): © André Plöger, **all rights reserved**.
+* Third-party components: see `THIRD_PARTY_LICENSES.md`.
