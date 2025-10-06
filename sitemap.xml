@@ -1,40 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!--Startseiten-->
   <url>
     <loc>https://granjadelsol.com/de/</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-10-06</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de"/>
   </url>
   <url>
     <loc>https://granjadelsol.com/en/</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-10-06</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de"/>
   </url>
   <url>
     <loc>https://granjadelsol.com/es/</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-10-06</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de"/>
   </url>
   <url>
     <loc>https://granjadelsol.com/pt/</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-10-06</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de"/>
+  </url>
+
+<!-- Fotogalerie-Seiten -->
+  <url>
+    <loc>https://granjadelsol.com/de/fotos.html</loc>
+    <lastmod>2025-09-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/fotos.html"/>
+  </url>
+
+  <url>
+    <loc>https://granjadelsol.com/en/fotos.html</loc>
+    <lastmod>2025-09-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/fotos.html"/>
+  </url>
+
+  <url>
+    <loc>https://granjadelsol.com/es/fotos.html</loc>
+    <lastmod>2025-09-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/fotos.html"/>
+  </url>
+
+  <url>
+    <loc>https://granjadelsol.com/pt/fotos.html</loc>
+    <lastmod>2025-09-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/fotos.html"/>
   </url>
 </urlset>
