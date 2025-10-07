@@ -886,7 +886,7 @@
 
                 if (!form.checkValidity()) {
                     e.preventDefault();
-                    form.reportValidity ? .();
+                    form.reportValidity?.();
                     hideAll();
                     show(boxError, 'Check your input.');
                     return;
