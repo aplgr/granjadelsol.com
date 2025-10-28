@@ -43,3 +43,16 @@ function copyLink() {
         document.getElementById("link-copied-msg").style.display='none';
     }, 3000);
 }
+
+
+// Funktion zum Teilen Facebook (-> Share auf mobilen Geräten)
+
+function sharePage() {
+    if(navigator.share) {
+        navigator.share({
+            url: window.location.href
+        });
+    } else {
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
+    }
+}
