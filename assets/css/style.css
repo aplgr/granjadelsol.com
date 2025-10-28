@@ -1286,6 +1286,42 @@ select:has(option[value="4"]:checked) {
     }
 }
 
+/* Styling für die Toast-Nachricht für Link kopieren */
+.toast-message {
+    position: fixed;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #587187;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.toast-message.show-toast {
+    display: block;
+    opacity: 1;
+}
+
+/* Tooltip bei Hover */
+.share-icon[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
 #footer {
     background: #587187;
     padding: 0 0 30px 0;

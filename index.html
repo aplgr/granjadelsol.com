@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Welcome to Granja del Sol – Your Land & Home in the Heart of Paraguay</title>
+    <title>Buy Land in Paraguay – 20 Hectares with House | Granja del Sol</title>
 
-    <meta name="description" content="Discover Granja del Sol—a place for sustainable, peaceful living surrounded by nature, offering you land and lifestyle opportunities in the heart of Guairá, Paraguay.">
+    <meta name="description"
+        content="Own 20 hectares of land with a house in Paraguay – ideal for self-sufficient living, families, or investors. Peaceful location with stunning views of the Ybytyruzu Mountains. Perfect rural property in South America.">
 
-
-    <meta name="keywords" content="Buy land in Paraguay, House in Paraguay, Paraguay property, 
-    Investing in South America, Land with forest,20 hectares of land, Land with farmland, Leisure property,Property with house, 
-    Permaculture land,Large property South America, Land with a view of Cerro Tres Kandu">
+    <meta name="keywords"
+        content="buy land in Paraguay, house in Paraguay, property in Paraguay, investment in South America, self-sufficient property, sustainable living Paraguay, rural living South America, Granja del Sol, 20-hectare property, Ybytyruzu Mountains, permaculture Paraguay, agrotourism Paraguay">
 
     <meta name="site-base" content="/">
 
@@ -28,36 +27,36 @@
     </noscript>
     <meta name="robots" content="noindex,follow">
     <script>
-        (function() {
-            var supported = ["de", "en", "es", "pt"];
-            var baseMeta = document.querySelector('meta[name="site-base"]');
-            var siteBase = (baseMeta && baseMeta.content) || "/";
-            if (siteBase.charAt(0) !== "/") siteBase = "/" + siteBase;
-            if (siteBase.slice(-1) !== "/") siteBase += "/";
+        (function () {
+            var supported=["de", "en", "es", "pt"];
+            var baseMeta=document.querySelector('meta[name="site-base"]');
+            var siteBase=(baseMeta&&baseMeta.content)||"/";
+            if(siteBase.charAt(0)!=="/") siteBase="/"+siteBase;
+            if(siteBase.slice(-1)!=="/") siteBase+="/";
 
-            var parts = location.pathname.replace(/^\//, "").split("/");
-            var idx = siteBase === "/" ? 0 : 1;
-            if (parts.length > idx && supported.indexOf(parts[idx]) >= 0) return;
+            var parts=location.pathname.replace(/^\//, "").split("/");
+            var idx=siteBase==="/"? 0:1;
+            if(parts.length>idx&&supported.indexOf(parts[idx])>=0) return;
 
             var manual;
             try {
-                manual = localStorage.getItem("lang");
-            } catch (e) {}
+                manual=localStorage.getItem("lang");
+            } catch(e) { }
 
-            var pref = (manual || (navigator.languages && navigator.languages[0]) || navigator.language || "en").toLowerCase();
-            var code = pref.split("-")[0];
-            var lang = supported.indexOf(code) >= 0 ? code : "en";
-            var target = siteBase + lang + "/" + location.search + location.hash;
+            var pref=(manual||(navigator.languages&&navigator.languages[0])||navigator.language||"en").toLowerCase();
+            var code=pref.split("-")[0];
+            var lang=supported.indexOf(code)>=0? code:"en";
+            var target=siteBase+lang+"/"+location.search+location.hash;
             location.replace(target);
         })();
 
-        document.addEventListener("click", function(e) {
-            var a = e.target.closest && e.target.closest("a[data-lang]");
-            if (!a) return;
-            var v = a.getAttribute("data-lang");
+        document.addEventListener("click", function (e) {
+            var a=e.target.closest&&e.target.closest("a[data-lang]");
+            if(!a) return;
+            var v=a.getAttribute("data-lang");
             try {
                 localStorage.setItem("lang", v);
-            } catch (err) {}
+            } catch(err) { }
         });
     </script>
 </head>
