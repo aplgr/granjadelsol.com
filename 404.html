@@ -57,20 +57,27 @@
             var parts=path.replace(/^\//, "").split("/").filter(Boolean);
             var idx=siteBase==="/"? 0:1;
 
-            if(parts.length>idx&&supported.indexOf(parts[idx])>=0) return;
+            // 🔧 Wenn die URL bereits eine Sprache enthält, leite zur Sprachstartseite
+            if(parts.length>idx&&supported.indexOf(parts[idx])>=0) {
+                var currentLang=parts[idx];
+                var newPath=window.location.origin+siteBase+currentLang+"/";
+                setTimeout(function () {
+                    location.replace(newPath+location.search+location.hash);
+                }, 500);
+                return;
+            }
 
+            // 🔧 Wenn keine Sprache erkannt wird: automatische Sprachwahl
             var manual;
             try { manual=localStorage.getItem("lang"); } catch(e) { }
             var pref=(manual||(navigator.languages&&navigator.languages[0])||navigator.language||"en").toLowerCase();
             var code=pref.split("-")[0];
             var lang=supported.indexOf(code)>=0? code:"en";
 
-            // hier: direkte Weiterleitung zur Sprach-Startseite
             var newPath=window.location.origin+siteBase+lang+"/";
-
             setTimeout(function () {
                 location.replace(newPath+location.search+location.hash);
-            }, 3000);
+            }, 500);
         })();
         document.addEventListener("click", function (e) {
             var a=e.target.closest&&e.target.closest("a[data-lang]");
