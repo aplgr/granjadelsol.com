@@ -63,7 +63,7 @@
                 var newPath=window.location.origin+siteBase+currentLang+"/";
                 setTimeout(function () {
                     location.replace(newPath+location.search+location.hash);
-                }, 500);
+                }, 3000);
                 return;
             }
 
@@ -77,7 +77,7 @@
             var newPath=window.location.origin+siteBase+lang+"/";
             setTimeout(function () {
                 location.replace(newPath+location.search+location.hash);
-            }, 500);
+            }, 3000);
         })();
         document.addEventListener("click", function (e) {
             var a=e.target.closest&&e.target.closest("a[data-lang]");
