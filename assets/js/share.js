@@ -16,6 +16,10 @@ function shareOnEmail(lang) {
             subject="En Venta: Propiedad con Casa en Paraguay, José Fassardi";
             body=`Aquí puedes ver la oferta completa y detallada de la propiedad: ${propertyUrl}`;
             break;
+        case 'pt':
+            subject="À Venda: Propriedade com Casa no Paraguai, José Fassardi";
+            body=`Veja todos os detalhes e fotos completos da propriedade aqui: ${propertyUrl}`;
+            break;
         default: // de
             subject="Zum Verkauf: Grundstück mit Haus in Paraguay, José Fassardi";
             body=`Hier findest du das komplette, detaillierte Immobilienangebot: ${propertyUrl}`;
