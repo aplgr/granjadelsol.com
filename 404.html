@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Page not found · Choose your language</title>
+    <title>Page not found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex,follow">
-    <meta name="description"
-        content="The requested page was not found. We will try to send you to the right language version.">
+    <meta name="description" content="The requested page was not found.">
 
     <meta name="site-base" content="/">
     <style>
@@ -29,55 +28,58 @@
 </head>
 
 <body>
-    <h1>Not found</h1>
-    <p>The requested path <code id="p"></code> was not found. If your language can be detected, you’ll be redirected.
+    <h1>🚫 Oops! Page not found</h1>
+    <p>
+        The page you’re looking for (<code id="p"></code>) couldn’t be found.
     </p>
-    <p>If not, choose your language:</p>
+    <p>
+        We’ll try to redirect you to the right language version automatically.
+        If that doesn’t work, please choose your language below:
+    </p>
     <nav aria-label="Languages">
-        <a href="de/" data-lang="de">Deutsch</a>
-        <a href="en/" data-lang="en">English</a>
-        <a href="es/" data-lang="es">Español</a>
-        <a href="pt/" data-lang="pt">Português</a>
+        <a href="/de/" data-lang="de">Deutsch</a>
+        <a href="/en/" data-lang="en">English</a>
+        <a href="/es/" data-lang="es">Español</a>
+        <a href="/pt/" data-lang="pt">Português</a>
     </nav>
 
     <script>
         (function () {
-            var supported = ["de", "en", "es", "pt"];
-            var baseMeta = document.querySelector('meta[name="site-base"]');
-            var siteBase = (baseMeta && baseMeta.content) || "/";
-            if (siteBase.charAt(0) !== "/") siteBase = "/" + siteBase;
-            if (siteBase.slice(-1) !== "/") siteBase += "/";
+            var supported=["de", "en", "es", "pt"];
+            var baseMeta=document.querySelector('meta[name="site-base"]');
+            var siteBase=(baseMeta&&baseMeta.content)||"/";
+            if(siteBase.charAt(0)!=="/") siteBase="/"+siteBase;
+            if(siteBase.slice(-1)!=="/") siteBase+="/";
 
-            var path = location.pathname;
-            document.getElementById("p").textContent = path || "/";
+            var path=location.pathname;
+            document.getElementById("p").textContent=path||"/";
 
-            var parts = path.replace(/^\//, "").split("/").filter(Boolean);
-            var idx = siteBase === "/" ? 0 : 1;
+            var parts=path.replace(/^\//, "").split("/").filter(Boolean);
+            var idx=siteBase==="/"? 0:1;
 
-            if (parts.length > idx && supported.indexOf(parts[idx]) >= 0) return;
+            if(parts.length>idx&&supported.indexOf(parts[idx])>=0) return;
 
             var manual;
-            try { manual = localStorage.getItem("lang"); } catch (e) { }
-            var pref = (manual || (navigator.languages && navigator.languages[0]) || navigator.language || "en").toLowerCase();
-            var code = pref.split("-")[0];
-            var lang = supported.indexOf(code) >= 0 ? code : "en";
+            try { manual=localStorage.getItem("lang"); } catch(e) { }
+            var pref=(manual||(navigator.languages&&navigator.languages[0])||navigator.language||"en").toLowerCase();
+            var code=pref.split("-")[0];
+            var lang=supported.indexOf(code)>=0? code:"en";
 
-            var rest = path.indexOf(siteBase) === 0 ? path.slice(siteBase.length) : path.replace(/^\//, "");
-            rest = rest.replace(/^\/+/, "");
+            // hier: direkte Weiterleitung zur Sprach-Startseite
+            var newPath=window.location.origin+siteBase+lang+"/";
 
-            var newPath = siteBase + lang + "/" + rest;
-            if (path.slice(-1) === "/") newPath += "/";
-
-            location.replace(newPath + location.search + location.hash);
+            setTimeout(function () {
+                location.replace(newPath+location.search+location.hash);
+            }, 3000);
         })();
-
         document.addEventListener("click", function (e) {
-            var a = e.target.closest && e.target.closest("a[data-lang]");
-            if (!a) return;
-            var v = a.getAttribute("data-lang");
-            try { localStorage.setItem("lang", v); } catch (err) { }
+            var a=e.target.closest&&e.target.closest("a[data-lang]");
+            if(!a) return;
+            var v=a.getAttribute("data-lang");
+            try { localStorage.setItem("lang", v); } catch(err) { }
         });
     </script>
+
 </body>
 
 </html>
