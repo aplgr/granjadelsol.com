@@ -1,0 +1,28 @@
+{
+    "name": "granjadelsol-com",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Static website for granjadelsol.com",
+    "scripts": {
+        "vendor:sync": "node scripts/sync-vendor.mjs",
+        "vendor:check": "node scripts/check-vendor.mjs",
+        "postinstall": "node scripts/sync-vendor.mjs"
+    },
+    "dependencies": {
+        "alpinejs": "3.15.11",
+        "animate.css": "3.7.2",
+        "aos": "2.3.4",
+        "bootstrap": "4.4.1",
+        "bootstrap-icons": "1.13.1",
+        "boxicons": "2.0.4",
+        "htmx.org": "1.9.12",
+        "icofont": "1.0.0",
+        "isotope-layout": "3.0.6",
+        "jquery": "3.4.1",
+        "jquery.counterup": "2.1.0",
+        "jquery-sticky": "1.0.4",
+        "jquery.easing": "1.4.1",
+        "venobox": "1.8.6",
+        "waypoints": "4.0.1"
+    }
+}
