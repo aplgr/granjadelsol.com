@@ -97,16 +97,13 @@
 
 <body>
     <header id="header">
-        <div class="container">
-            <div class="logo float-left">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
                 <h1 class="text-light"><a href="https://www.granjadelsol.com/"><span>Granja del Sol</span></a></h1>
             </div>
-            <nav class="nav-menu float-right d-none d-lg-block">
+            <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li class="drop-down">
-                        <a href="">
-                            <i class="bi bi-translate"></i> Language
-                        </a>
+                    <li class="dropdown"><a href="#"><span><i class="bi bi-translate"></i> Language</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="../de/index.html" data-lang="de" hreflang="de">Deutsch</a></li>
                             <li><a href="../en/index.html" data-lang="en" hreflang="en">English</a></li>
@@ -114,7 +111,7 @@
                             <li><a href="../pt/index.html" data-lang="pt" hreflang="pt">Portugu&ecirc;s</a></li>
                         </ul>
                     </li>
-                    <li class="drop-down"><a href="">Property Details</a>
+                    <li class="dropdown"><a href="#"><span>Property Details</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="#location">Location</a></li>
                             <li><a href="#property">Land</a></li>
@@ -127,13 +124,14 @@
                     <!--<li><a href="#price">Price</a></li>-->
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <i class="mobile-nav-toggle d-lg-none bi bi-list" aria-label="Toggle navigation"></i>
             </nav>
         </div>
     </header>
     <section id="hero">
         <div class="hero-container">
-            <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators" id="hero-carousel-indicators"></div>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active"
                         style="background-image: url('../assets/img/slide/grundstueck_allg.jpg');">
@@ -151,6 +149,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <main id="main">
@@ -187,11 +186,10 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
         <section id="location" class="about">
             <div class="container">
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 video-box">
                         <a href="https://maps.app.goo.gl/PPgRJ4K8pMW521oRA" target="_blank">
                             <img src="../assets/img/Grundstueck_alle/Lage2.jpg" class="img-fluid"
@@ -201,15 +199,13 @@
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="section-title">
                             <h2>Location</h2>
-                            <p>
                             <p>José Fassardi is a small town with about 5,100 inhabitants (as of 2022) and is located in
                                 the Guairá administrative district.
                             </p><br>
                             <p>The property is situated north of the town center in a quiet and rural environment,
                                 offering plenty of space for relaxation and nature.
                                 It is accessible via a side road that is passable in all weather conditions.
-                                In the immediate vicinity, there are small shops (despensas) for daily needs.</p>
-                            </p><br>
+                                In the immediate vicinity, there are small shops (despensas) for daily needs.</p><br>
                             <p>The center of José Fassardi is only about 2 km away. There you will find various shopping
                                 options, medical facilities, as well as elementary and secondary schools.
                                 Additionally, there is a central bus stop from which buses depart daily to various
@@ -228,7 +224,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-tick-mark"></i></div>
@@ -276,7 +272,7 @@
         </section>
         <section id="property" class="about">
             <div class="container">
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 video-box">
                         <a href="../assets/img/Grundstueck_alle/Grundstueck.webp" target="_blank">
                             <img src="../assets/img/Grundstueck_alle/Grundstueck.webp" class="img-fluid"
@@ -300,7 +296,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-tree"></i></div>
@@ -356,7 +352,7 @@
         </section>
         <section id="house" class="about">
             <div class="container">
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 video-box">
                         <a href="../assets/img/Grundstueck_alle/Haus.webp" target="_blank">
                             <img src="../assets/img/Grundstueck_alle/Haus.webp" class="img-fluid"
@@ -382,7 +378,6 @@
                                 and direct access to the terrace – ideal for cozy and cheerful times with family and
                                 friends in a bright, inviting atmosphere.
                                 A practical <strong>storage room (Deposito)</strong> adjoins the kitchen.
-                            </p>
                             </p><br>
                             <p>With a <strong>total area of 280 m²</strong>, including the terrace, the house offers
                                 ample space for the whole family and is <strong>ready for immediate occupancy</strong> –
@@ -392,7 +387,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-home"></i></div>
@@ -512,288 +507,268 @@
                     <h2>Frequently Asked Questions - Our Answers</h2>
                 </div>
 
-                <div id="faqAccordion" class="accordion">
+                <div id="faqAccordion-en" class="accordion faq-accordion">
                     <!-- FAQ 1 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingOne">
-                            <h5
-                                class="mb-0 d-flex justify-content-between align-items-center text-decoration-none flex-grow-1">
-                                <a class="collapsed d-flex align-items-center" style="color: #5c768d;"
-                                    data-toggle="collapse" href="#faqCollapseOne" aria-expanded="false"
-                                    aria-controls="faqCollapseOne">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Are there more photos of the land and the house?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseOne" class="collapse" aria-labelledby="faqHeadingOne"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-en-1-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-en-1-collapse" aria-expanded="false"
+                                aria-controls="faq-en-1-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Are there more photos of the land and the house?
+                            </button>
+                        </h3>
+                        <div id="faq-en-1-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-en-1-heading" data-bs-parent="#faqAccordion-en">
+                            <div class="accordion-body">
                                 Yes! More photos of the land and the house can be found in our <a
-                                    href="fotos.html">photo gallery</a>.
+                                                                    href="fotos.html">photo gallery</a>.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 2 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingTwo">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseTwo"
-                                    aria-expanded="false" aria-controls="faqCollapseTwo">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Who is this property suitable for?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseTwo" class="collapse" aria-labelledby="faqHeadingTwo"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-en-2-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-en-2-collapse" aria-expanded="false"
+                                aria-controls="faq-en-2-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Who is this property suitable for?
+                            </button>
+                        </h3>
+                        <div id="faq-en-2-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-en-2-heading" data-bs-parent="#faqAccordion-en">
+                            <div class="accordion-body">
                                 The property is ideal for:
-                                <ul>
-                                    <li>People looking for a safe place or “Plan B” in uncertain times.</li>
-                                    <li>People who want more nature, peace and space.</li>
-                                    <li>People who want a fresh start or try a new lifestyle.</li>
-                                    <br>
-                                    <li>Families or groups who want to create a small community.</li>
-                                    <li>Self-sufficiency, small farm, or agricultural use.</li>
-                                    <li>Eco-tourism projects, retreats, guesthouses for hikers or digital nomads.</li>
-                                    <li>Investors.</li>
-                                </ul>
+                                                                <ul>
+                                                                    <li>People looking for a safe place or “Plan B” in uncertain times.</li>
+                                                                    <li>People who want more nature, peace and space.</li>
+                                                                    <li>People who want a fresh start or try a new lifestyle.</li>
+                                                                    <br>
+                                                                    <li>Families or groups who want to create a small community.</li>
+                                                                    <li>Self-sufficiency, small farm, or agricultural use.</li>
+                                                                    <li>Eco-tourism projects, retreats, guesthouses for hikers or digital nomads.</li>
+                                                                    <li>Investors.</li>
+                                                                </ul>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 3 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingThree">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseThree"
-                                    aria-expanded="false" aria-controls="faqCollapseThree">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    What are the running costs?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseThree" class="collapse" aria-labelledby="faqHeadingThree"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-en-3-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-en-3-collapse" aria-expanded="false"
+                                aria-controls="faq-en-3-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                What are the running costs?
+                            </button>
+                        </h3>
+                        <div id="faq-en-3-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-en-3-heading" data-bs-parent="#faqAccordion-en">
+                            <div class="accordion-body">
                                 There is an annual <strong>property tax</strong>. In this year (2026) this was 305.600
-                                PYG (~ 37.80
-                                Euros).
-                                <br>This amount depends on local rules and may change slightly each year.
-                                <p>Electric <strong>power</strong> comes from the state provider ANDE at 310 PYG per kWh
-                                    (~ 0.04 Euros). Other than that, there are no regular running costs. (Status:
-                                    05/2025)</p>
+                                                                PYG (~ 37.80
+                                                                Euros).
+                                                                <br>This amount depends on local rules and may change slightly each year.
+                                                                <p>Electric <strong>power</strong> comes from the state provider ANDE at 310 PYG per kWh
+                                                                    (~ 0.04 Euros). Other than that, there are no regular running costs. (Status:
+                                                                    05/2025)</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 4 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingFour">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseFour"
-                                    aria-expanded="false" aria-controls="faqCollapseFour">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    What is the soil like?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseFour" class="collapse" aria-labelledby="faqHeadingFour"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-en-4-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-en-4-collapse" aria-expanded="false"
+                                aria-controls="faq-en-4-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                What is the soil like?
+                            </button>
+                        </h3>
+                        <div id="faq-en-4-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-en-4-heading" data-bs-parent="#faqAccordion-en">
+                            <div class="accordion-body">
                                 The property has clay-rich and fertile soil, which is excellent for agricultural use.
-                                The
-                                good water retention ensures stable moisture, especially during the warm summer months.
-                                Compared to other regions in Paraguay, where soils with high sand content quickly lose
-                                water, this property offers a particularly advantageous basis for efficient irrigation.
-                                Additionally, the vegetable garden has already been enriched with manure, further
-                                improving
-                                soil quality.
+                                                                The
+                                                                good water retention ensures stable moisture, especially during the warm summer months.
+                                                                Compared to other regions in Paraguay, where soils with high sand content quickly lose
+                                                                water, this property offers a particularly advantageous basis for efficient irrigation.
+                                                                Additionally, the vegetable garden has already been enriched with manure, further
+                                                                improving
+                                                                soil quality.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 5 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingFive">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseFive"
-                                    aria-expanded="false" aria-controls="faqCollapseFive">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Are there neighbors or is it remote?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseFive" class="collapse" aria-labelledby="faqHeadingFive"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-en-5-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-en-5-collapse" aria-expanded="false"
+                                aria-controls="faq-en-5-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Are there neighbors or is it remote?
+                            </button>
+                        </h3>
+                        <div id="faq-en-5-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-en-5-heading" data-bs-parent="#faqAccordion-en">
+                            <div class="accordion-body">
                                 The property is in a rural area. The two adjacent plots are not inhabited.
-                                Local Paraguayan neighbors live about 200m away.
-                                In the wider area of José Fassardi, some German families have also settled.
+                                                                Local Paraguayan neighbors live about 200m away.
+                                                                In the wider area of José Fassardi, some German families have also settled.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 6 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingSix">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseSix"
-                                    aria-expanded="false" aria-controls="faqCollapseSix">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Does the land have a "title"?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseSix" class="collapse" aria-labelledby="faqHeadingSix"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-en-6-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-en-6-collapse" aria-expanded="false"
+                                aria-controls="faq-en-6-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Does the land have a "title"?
+                            </button>
+                        </h3>
+                        <div id="faq-en-6-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-en-6-heading" data-bs-parent="#faqAccordion-en">
+                            <div class="accordion-body">
                                 Yes, the property title is available. The transfer of the property is therefore possible
-                                immediately.
+                                                                immediately.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 7 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingSeven">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseSeven"
-                                    aria-expanded="false" aria-controls="faqCollapseSeven">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    What exactly is the "title" about?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseSeven" class="collapse" aria-labelledby="faqHeadingSeven"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-en-7-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-en-7-collapse" aria-expanded="false"
+                                aria-controls="faq-en-7-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                What exactly is the "title" about?
+                            </button>
+                        </h3>
+                        <div id="faq-en-7-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-en-7-heading" data-bs-parent="#faqAccordion-en">
+                            <div class="accordion-body">
                                 They are an official document that shows who the legal owner of the land is.
-                                They are needed to sell or transfer the property.
-                                Without them, no legal sale is possible.
+                                                                They are needed to sell or transfer the property.
+                                                                Without them, no legal sale is possible.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 8 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingEight">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseEight"
-                                    aria-expanded="false" aria-controls="faqCollapseEight">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    How does the buying process work?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseEight" class="collapse" aria-labelledby="faqHeadingEight"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-en-8-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-en-8-collapse" aria-expanded="false"
+                                aria-controls="faq-en-8-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                How does the buying process work?
+                            </button>
+                        </h3>
+                        <div id="faq-en-8-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-en-8-heading" data-bs-parent="#faqAccordion-en">
+                            <div class="accordion-body">
                                 The buying process in Paraguay has a few steps:
-                                <ol>
-                                    <li>First meeting with the notary:
-                                        <ul>
-                                            <li>Sign a preliminary contract.</li>
-                                            <li>Pay a deposit.</li>
-                                            <li>The notary checks the ownership papers (takes about 2–4 weeks).</li>
-                                        </ul>
-                                    </li>
-                                    <br>
-                                    <li>Second meeting with the notary:
-                                        <ul>
-                                            <li>Sign the purchase contract.</li>
-                                            <li>Pay the rest of the purchase price.</li>
-                                            <li>The notary starts the transfer of ownership (takes about 4–8 weeks).
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                                <p>After full payment, the property belongs to the new owner, who can use it
-                                    immediately. The
-                                    issuance of the new title is a mere formality. Once completed, the Escribana will
-                                    contact
-                                    the new owner to collect the document.</p>
+                                                                <ol>
+                                                                    <li>First meeting with the notary:
+                                                                        <ul>
+                                                                            <li>Sign a preliminary contract.</li>
+                                                                            <li>Pay a deposit.</li>
+                                                                            <li>The notary checks the ownership papers (takes about 2–4 weeks).</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <br>
+                                                                    <li>Second meeting with the notary:
+                                                                        <ul>
+                                                                            <li>Sign the purchase contract.</li>
+                                                                            <li>Pay the rest of the purchase price.</li>
+                                                                            <li>The notary starts the transfer of ownership (takes about 4–8 weeks).
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ol>
+                                                                <p>After full payment, the property belongs to the new owner, who can use it
+                                                                    immediately. The
+                                                                    issuance of the new title is a mere formality. Once completed, the Escribana will
+                                                                    contact
+                                                                    the new owner to collect the document.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 9 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingNine">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseNine"
-                                    aria-expanded="false" aria-controls="faqCollapseNine">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    What costs come with buying the land?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseNine" class="collapse" aria-labelledby="faqHeadingNine"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-en-9-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-en-9-collapse" aria-expanded="false"
+                                aria-controls="faq-en-9-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                What costs come with buying the land?
+                            </button>
+                        </h3>
+                        <div id="faq-en-9-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-en-9-heading" data-bs-parent="#faqAccordion-en">
+                            <div class="accordion-body">
                                 <p>In addition to the purchase price, there are other so-called ancillary costs that are
-                                    borne by the buyer.
-                                    <br>These include, in particular, the costs for the legal transfer of the property
-                                    (“transfer costs”) and, if involved, the real estate agent fees.
-                                </p>
+                                                                    borne by the buyer.
+                                                                    <br>These include, in particular, the costs for the legal transfer of the property
+                                                                    (“transfer costs”) and, if involved, the real estate agent fees.
+                                                                </p>
 
-                                <h5>Transfer Costs</h5>
-                                <p>These are the official costs for transferring the land to the new owner. They are
-                                    paid at the notary’s office and usually range between <strong>about 1.5% and
-                                        4.5%</strong> of the purchase price. The notary will calculate them in advance
-                                    and explain clearly.</p>
-                                <p>They include for example:</p>
-                                <ul>
-                                    <li><strong>Notary fees:</strong> Preparing and confirming the purchase contract and
-                                        handling the legal transfer.</li>
-                                    <li><strong>Land registry fees:</strong> Registering the new owner in the national
-                                        land registry.</li>
-                                    <li><strong>Taxes:</strong> Depending on location and purchase price, some state or
-                                        local taxes may apply.</li>
-                                    <li><strong>Administrative fees:</strong> For example at cadastral offices or tax
-                                        offices.</li>
-                                </ul>
+                                                                <h5>Transfer Costs</h5>
+                                                                <p>These are the official costs for transferring the land to the new owner. They are
+                                                                    paid at the notary’s office and usually range between <strong>about 1.5% and
+                                                                        4.5%</strong> of the purchase price. The notary will calculate them in advance
+                                                                    and explain clearly.</p>
+                                                                <p>They include for example:</p>
+                                                                <ul>
+                                                                    <li><strong>Notary fees:</strong> Preparing and confirming the purchase contract and
+                                                                        handling the legal transfer.</li>
+                                                                    <li><strong>Land registry fees:</strong> Registering the new owner in the national
+                                                                        land registry.</li>
+                                                                    <li><strong>Taxes:</strong> Depending on location and purchase price, some state or
+                                                                        local taxes may apply.</li>
+                                                                    <li><strong>Administrative fees:</strong> For example at cadastral offices or tax
+                                                                        offices.</li>
+                                                                </ul>
 
-                                <h5>Real estate agent Fees</h5>
-                                <p>Currently, no agent is involved, so no real estate agent fees are incurred.
-                                    Should an agent be commissioned during the course of the transaction — regardless of
-                                    whether by the buyer or seller — the buyer shall bear the corresponding fees.</p>
+                                                                <h5>Real estate agent Fees</h5>
+                                                                <p>Currently, no agent is involved, so no real estate agent fees are incurred.
+                                                                    Should an agent be commissioned during the course of the transaction — regardless of
+                                                                    whether by the buyer or seller — the buyer shall bear the corresponding fees.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 10 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingTen">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseTen"
-                                    aria-expanded="false" aria-controls="faqCollapseTen">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Do contracts have to be in Spanish?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseTen" class="collapse" aria-labelledby="faqHeadingTen"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-en-10-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-en-10-collapse" aria-expanded="false"
+                                aria-controls="faq-en-10-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Do contracts have to be in Spanish?
+                            </button>
+                        </h3>
+                        <div id="faq-en-10-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-en-10-heading" data-bs-parent="#faqAccordion-en">
+                            <div class="accordion-body">
                                 Yes, in Paraguay contracts must be written in Spanish and understood by both sides to be
-                                valid. If you don’t speak Spanish well, a certified translator should be present. The
-                                costs depend on travel and the length of the meeting.
+                                                                valid. If you don’t speak Spanish well, a certified translator should be present. The
+                                                                costs depend on travel and the length of the meeting.
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <section id="price" class="faq section-bg">
@@ -825,6 +800,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <section id="contact" class="contact">
             <div class="container">
@@ -847,10 +823,10 @@
                             hx-disabled-elt="button[type=submit], input[type=submit]"
                             @htmx:configRequest.window="configRequest($event)"
                             @htmx:beforeRequest.window="beforeRequest($event)"
-                            @htmx:afterRequest.window="afterRequest($event)" action="" method="post"
+                            @htmx:afterRequest.window="afterRequest($event)" action="../cgi-bin/contact.py" method="post"
                             class="php-email-form">
 
-                            <div class="form-row">
+                            <div class="row">
                                 <div class="col-lg-6 form-group">
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Name"
                                         data-rule="minlen:4" data-msg="Please enter at least 4 characters." />
@@ -976,14 +952,13 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
     </main>
     <footer id="footer">
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span><a href="https://andreploeger.com" target="_blank"></a>Andr&eacute;
-                        Pl&ouml;ger</a></span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span><a href="https://andreploeger.com" target="_blank">Andr&eacute;
+                            Pl&ouml;ger</a></span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 Template designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a> | Favicons
@@ -995,10 +970,7 @@
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="../assets/vendor/jquery-sticky/jquery.sticky.js"></script>
     <script src="../assets/vendor/venobox/venobox.min.js"></script>
-    <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
     <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../assets/vendor/aos/aos.js"></script>
     <script src="../assets/js/main.js"></script>

@@ -100,16 +100,13 @@
 
 <body>
     <header id="header">
-        <div class="container">
-            <div class="logo float-left">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
                 <h1 class="text-light"><a href="https://www.granjadelsol.com/"><span>Granja del Sol</span></a></h1>
             </div>
-            <nav class="nav-menu float-right d-none d-lg-block">
+            <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li class="drop-down">
-                        <a href="">
-                            <i class="bi bi-translate"></i> Sprache
-                        </a>
+                    <li class="dropdown"><a href="#"><span><i class="bi bi-translate"></i> Sprache</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="../de/index.html" data-lang="de" hreflang="de">Deutsch</a></li>
                             <li><a href="../en/index.html" data-lang="en" hreflang="en">English</a></li>
@@ -117,7 +114,7 @@
                             <li><a href="../pt/index.html" data-lang="pt" hreflang="pt">Portugu&ecirc;s</a></li>
                         </ul>
                     </li>
-                    <li class="drop-down"><a href="">Objekt-Details</a>
+                    <li class="dropdown"><a href="#"><span>Objekt-Details</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="#location">Lage</a></li>
                             <li><a href="#property">Grundstück</a></li>
@@ -130,13 +127,14 @@
                     <!--<li><a href="#price">Preis</a></li>-->
                     <li><a href="#contact">Kontakt</a></li>
                 </ul>
+                <i class="mobile-nav-toggle d-lg-none bi bi-list" aria-label="Toggle navigation"></i>
             </nav>
         </div>
     </header>
     <section id="hero">
         <div class="hero-container">
-            <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators" id="hero-carousel-indicators"></div>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active"
                         style="background-image: url('../assets/img/slide/grundstueck_allg.jpg');">
@@ -154,6 +152,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <main id="main">
@@ -194,11 +193,10 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
         <section id="location" class="about">
             <div class="container">
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 video-box">
                         <a href="https://maps.app.goo.gl/PPgRJ4K8pMW521oRA" target="_blank">
                             <img src="../assets/img/Grundstueck_alle/Lage2.jpg" class="img-fluid" alt="Lage in Paraguay"
@@ -208,7 +206,6 @@
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="section-title">
                             <h2>Lage</h2>
-                            <p>
                             <p> José Fassardi ist eine kleinere Stadt mit ca. 5100 Einwohner (Stand: 2022) und liegt im
                                 Verwaltungsbezirk Guairá.
                             </p><br>
@@ -216,8 +213,7 @@
                                 Umgebung, und bietet viel Raum für Entspannung und Natur.
                                 Es ist über eine Nebenstraße erreichbar, die bei allen Wetterlagen gut befahrbar ist.
                                 In der unmittelbaren Umgebung befinden sich kleinere Geschäfte (Despensen) für den
-                                täglichen Bedarf.</p>
-                            </p><br>
+                                täglichen Bedarf.</p><br>
                             <p>Das Zentrum der Stadt José Fassardi ist nur etwa 2 km entfernt. Dort befinden sich
                                 verschiedene Einkaufsmöglichkeiten, ärztliche Einrichtungen sowie die Grund- und
                                 weiterführende Schule.
@@ -234,12 +230,10 @@
                                 Lage des Grundstücks bietet Ihnen eine ausgewogene Mischung aus beidem.
                                 Die Infrastruktur und die Anbindung ermöglichen es, sowohl in der Natur zu leben als
                                 auch schnell auf städtische Annehmlichkeiten zurückzugreifen.</p>
-
-                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-tick-mark"></i></div>
@@ -286,7 +280,7 @@
         </section>
         <section id="property" class="about">
             <div class="container">
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 video-box">
                         <a href="../assets/img/Grundstueck_alle/Grundstueck.webp" target="_blank">
                             <img src="../assets/img/Grundstueck_alle/Grundstueck.webp" class="img-fluid"
@@ -310,7 +304,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-tree"></i></div>
@@ -369,7 +363,7 @@
 
         <section id="house" class="about">
             <div class="container">
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 video-box">
                         <a href="../assets/img/Grundstueck_alle/Haus.webp" target="_blank">
                             <img src="../assets/img/Grundstueck_alle/Haus.webp" class="img-fluid"
@@ -397,7 +391,6 @@
                                 und Freunden in einer hellen, einladenden Atmosphäre.
                                 Direkt an die Küche schließt sich zudem ein praktischer <strong>Abstellraum
                                     (Deposito)</strong> an.
-                            </p>
                             </p><br>
                             <p>Mit einer <strong>Gesamtfläche von 280 m²</strong> bietet das Haus inkl. Terrasse
                                 ausreichend Platz für die ganze Familie und ist <strong>sofort bezugsfertig</strong> –
@@ -407,7 +400,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-home"></i></div>
@@ -528,305 +521,280 @@
                     <h2>Häufige Fragen - Unsere Antworten</h2>
                 </div>
 
-                <div id="faqAccordion" class="accordion">
+                <div id="faqAccordion-de" class="accordion faq-accordion">
                     <!-- FAQ 1 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingOne">
-                            <h5
-                                class="mb-0 d-flex justify-content-between align-items-center text-decoration-none flex-grow-1">
-                                <a class="collapsed d-flex align-items-center" style="color: #5c768d;"
-                                    data-toggle="collapse" href="#faqCollapseOne" aria-expanded="false"
-                                    aria-controls="faqCollapseOne">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Gibt es noch weitere Bilder zu dem Grundstück und dem Haus?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseOne" class="collapse" aria-labelledby="faqHeadingOne"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-de-1-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-de-1-collapse" aria-expanded="false"
+                                aria-controls="faq-de-1-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Gibt es noch weitere Bilder zu dem Grundstück und dem Haus?
+                            </button>
+                        </h3>
+                        <div id="faq-de-1-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-de-1-heading" data-bs-parent="#faqAccordion-de">
+                            <div class="accordion-body">
                                 Natürlich! Weitere Bilder zum Grundstück und zu dem Haus finden Sie in unserer <a
-                                    href="fotos.html">Fotogalerie</a>.
+                                                                    href="fotos.html">Fotogalerie</a>.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 2 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingTwo">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseTwo"
-                                    aria-expanded="false" aria-controls="faqCollapseTwo">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Für wen ist das Grundstück besonders geeignet?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseTwo" class="collapse" aria-labelledby="faqHeadingTwo"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-de-2-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-de-2-collapse" aria-expanded="false"
+                                aria-controls="faq-de-2-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Für wen ist das Grundstück besonders geeignet?
+                            </button>
+                        </h3>
+                        <div id="faq-de-2-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-de-2-heading" data-bs-parent="#faqAccordion-de">
+                            <div class="accordion-body">
                                 Aufgrund seiner vielseitigen Möglichkeiten ist das Grundstück ideal für:
-                                <ul>
-                                    <li>Menschen, die einen sicheren Rückzugsort oder "Plan B" in herausfordernden
-                                        Zeiten suchen.</li>
-                                    <li>Menschen, die sich nach mehr Natur, Ruhe und Freiraum sehnen.</li>
-                                    <li>Menschen, die einen Neuanfang wagen oder neue, alternative Wege ausprobieren
-                                        wollen.</li>
-                                    <br>
-                                    <li>Familien oder Menschen, welche eine "Community" gründen wollen</li>
-                                    <li>Selbstversorger, Bauernhof, Landwirtschaftliche Nutzung</li>
-                                    <li>Aufbau Öko-Tourismus, Erholungs-Resort, Herbergen für u.a. Wanderer oder
-                                        Digitale Nomaden</li>
-                                    <li>Investoren</li>
-                                </ul>
+                                                                <ul>
+                                                                    <li>Menschen, die einen sicheren Rückzugsort oder "Plan B" in herausfordernden
+                                                                        Zeiten suchen.</li>
+                                                                    <li>Menschen, die sich nach mehr Natur, Ruhe und Freiraum sehnen.</li>
+                                                                    <li>Menschen, die einen Neuanfang wagen oder neue, alternative Wege ausprobieren
+                                                                        wollen.</li>
+                                                                    <br>
+                                                                    <li>Familien oder Menschen, welche eine "Community" gründen wollen</li>
+                                                                    <li>Selbstversorger, Bauernhof, Landwirtschaftliche Nutzung</li>
+                                                                    <li>Aufbau Öko-Tourismus, Erholungs-Resort, Herbergen für u.a. Wanderer oder
+                                                                        Digitale Nomaden</li>
+                                                                    <li>Investoren</li>
+                                                                </ul>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 3 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingThree">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseThree"
-                                    aria-expanded="false" aria-controls="faqCollapseThree">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Welche laufenden Kosten kommen auf mich zu?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseThree" class="collapse" aria-labelledby="faqHeadingThree"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-de-3-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-de-3-collapse" aria-expanded="false"
+                                aria-controls="faq-de-3-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Welche laufenden Kosten kommen auf mich zu?
+                            </button>
+                        </h3>
+                        <div id="faq-de-3-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-de-3-heading" data-bs-parent="#faqAccordion-de">
+                            <div class="accordion-body">
                                 Jährlich ist eine <strong>Grundstückssteuer</strong> zu entrichten. Diese wurde für das
-                                aktuelle Jahr 2026 entrichtet und betrug 305.600 PYG (ca. 37,80 Euro).
-                                <br>Dieser Betrag ist von behördlichen Vorgaben abhängig und kann sich jährlich etwas
-                                ändern.
-                                <p>Elektrischen <strong>Strom</strong> beziehen wir von staatlichen Versorger ANDE, die
-                                    dafür 310 PYG (ca. 0,04 Euro) pro kWh berechnet. Ansonsten fallen keine weiteren
-                                    laufenden Kosten an. (Stand: 05/2025)</p>
+                                                                aktuelle Jahr 2026 entrichtet und betrug 305.600 PYG (ca. 37,80 Euro).
+                                                                <br>Dieser Betrag ist von behördlichen Vorgaben abhängig und kann sich jährlich etwas
+                                                                ändern.
+                                                                <p>Elektrischen <strong>Strom</strong> beziehen wir von staatlichen Versorger ANDE, die
+                                                                    dafür 310 PYG (ca. 0,04 Euro) pro kWh berechnet. Ansonsten fallen keine weiteren
+                                                                    laufenden Kosten an. (Stand: 05/2025)</p>
                             </div>
                         </div>
                     </div>
-
 
                     <!-- FAQ 4 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingFour">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseFour"
-                                    aria-expanded="false" aria-controls="faqCollapseFour">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Welche Bodenbeschaffenheit hat das Grundstück?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseFour" class="collapse" aria-labelledby="faqHeadingFour"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-de-4-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-de-4-collapse" aria-expanded="false"
+                                aria-controls="faq-de-4-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Welche Bodenbeschaffenheit hat das Grundstück?
+                            </button>
+                        </h3>
+                        <div id="faq-de-4-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-de-4-heading" data-bs-parent="#faqAccordion-de">
+                            <div class="accordion-body">
                                 Das Grundstück verfügt über einen lehmhaltigen und fruchtbaren Boden, der sich
-                                hervorragend für landwirtschaftliche Nutzung eignet.
-                                Die gute Wasserbindung sorgt besonders in den warmen Sommermonaten für stabile
-                                Feuchtigkeit.
-                                Im Vergleich zu anderen Regionen in Paraguay, wo Böden mit hohem Sandanteil schnell
-                                Wasser verlieren, bietet dieses Grundstück eine besonders vorteilhafte Grundlage für
-                                eine effiziente Bewässerung.
-                                Zudem wurde das Gemüsebeet bereits mit Mist angereichert, was die Bodenqualität
-                                zusätzlich verbessert.
+                                                                hervorragend für landwirtschaftliche Nutzung eignet.
+                                                                Die gute Wasserbindung sorgt besonders in den warmen Sommermonaten für stabile
+                                                                Feuchtigkeit.
+                                                                Im Vergleich zu anderen Regionen in Paraguay, wo Böden mit hohem Sandanteil schnell
+                                                                Wasser verlieren, bietet dieses Grundstück eine besonders vorteilhafte Grundlage für
+                                                                eine effiziente Bewässerung.
+                                                                Zudem wurde das Gemüsebeet bereits mit Mist angereichert, was die Bodenqualität
+                                                                zusätzlich verbessert.
                             </div>
                         </div>
                     </div>
-
 
                     <!-- FAQ 5 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingFive">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseFive"
-                                    aria-expanded="false" aria-controls="faqCollapseFive">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Gibt es Nachbarn oder ist das Grundstück abgelegen?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseFive" class="collapse" aria-labelledby="faqHeadingFive"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-de-5-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-de-5-collapse" aria-expanded="false"
+                                aria-controls="faq-de-5-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Gibt es Nachbarn oder ist das Grundstück abgelegen?
+                            </button>
+                        </h3>
+                        <div id="faq-de-5-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-de-5-heading" data-bs-parent="#faqAccordion-de">
+                            <div class="accordion-body">
                                 Das Grundstück befindet sich in einer ländlichen Umgebung. Die beiden angrenzenden
-                                Nachbargrundstücke sind nicht bewohnt.
-                                Paraguayische Nachbarschaft gibt es in ca. 200m Entfernung. In der Umgebung von José
-                                Fassardi haben sich zudem vereinzelt deutsche Einwanderer niedergelassen.
+                                                                Nachbargrundstücke sind nicht bewohnt.
+                                                                Paraguayische Nachbarschaft gibt es in ca. 200m Entfernung. In der Umgebung von José
+                                                                Fassardi haben sich zudem vereinzelt deutsche Einwanderer niedergelassen.
                             </div>
                         </div>
                     </div>
 
-
                     <!-- FAQ 6 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingSix">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseSix"
-                                    aria-expanded="false" aria-controls="faqCollapseSix">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Gibt es einen Titel für das Grundstück?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseSix" class="collapse" aria-labelledby="faqHeadingSix"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-de-6-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-de-6-collapse" aria-expanded="false"
+                                aria-controls="faq-de-6-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Gibt es einen Titel für das Grundstück?
+                            </button>
+                        </h3>
+                        <div id="faq-de-6-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-de-6-heading" data-bs-parent="#faqAccordion-de">
+                            <div class="accordion-body">
                                 Ja, der Grundstückstitel ist vorhanden. Die Übertragung des Grundstücks ist somit sofort
-                                möglich.
+                                                                möglich.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 7 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingSeven">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseSeven"
-                                    aria-expanded="false" aria-controls="faqCollapseSeven">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Was genau hat es mit dem „Titel“ auf sich?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseSeven" class="collapse" aria-labelledby="faqHeadingSeven"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-de-7-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-de-7-collapse" aria-expanded="false"
+                                aria-controls="faq-de-7-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Was genau hat es mit dem „Titel“ auf sich?
+                            </button>
+                        </h3>
+                        <div id="faq-de-7-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-de-7-heading" data-bs-parent="#faqAccordion-de">
+                            <div class="accordion-body">
                                 Der Titel ist ein offizielles Dokument, das den rechtmäßigen Eigentümer des Grundstücks
-                                ausweist.
-                                Er ist notwendig, um das Grundstück zu verkaufen oder zu übertragen.
-                                Ohne diesen Titel kann kein rechtswirksamer Verkauf stattfinden.
+                                                                ausweist.
+                                                                Er ist notwendig, um das Grundstück zu verkaufen oder zu übertragen.
+                                                                Ohne diesen Titel kann kein rechtswirksamer Verkauf stattfinden.
                             </div>
                         </div>
                     </div>
 
-
                     <!-- FAQ 8 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingEight">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseEight"
-                                    aria-expanded="false" aria-controls="faqCollapseEight">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Wie läuft der Kaufprozess ab?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseEight" class="collapse" aria-labelledby="faqHeadingEight"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-de-8-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-de-8-collapse" aria-expanded="false"
+                                aria-controls="faq-de-8-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Wie läuft der Kaufprozess ab?
+                            </button>
+                        </h3>
+                        <div id="faq-de-8-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-de-8-heading" data-bs-parent="#faqAccordion-de">
+                            <div class="accordion-body">
                                 Der Kaufprozess in Paraguay erfolgt in mehreren Schritten:
-                                <ol>
-                                    <li>Erster Termin bei der Escribana (Notar):
-                                        <ul>
-                                            <li>Abschluss eines Vorvertrags.</li>
-                                            <li>Leistung einer Anzahlung.</li>
-                                            <li>Formelle Überprüfung des Titels durch die Escribana (Dauer: 2–4 Wochen).
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <br>
-                                    <li>Zweiter Termin bei der Escribana:
-                                        <ul>
-                                            <li>Unterzeichnung des Kaufvertrags.</li>
-                                            <li>Restzahlung des Kaufpreises.</li>
-                                            <li>Die Escribana startet die Eigentumsübertragung (Dauer: 4–8 Wochen).</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                                <p>Nach der vollständigen Zahlung gehört das Grundstück dem neuen Eigentümer, der es
-                                    sofort nutzen kann.
-                                    Die Ausstellung des neuen Titels ist eine reine Formalität. Nach Fertigstellung
-                                    meldet sich die Escribana, damit
-                                    der neue Eigentümer das Dokument abholen kann.</p>
+                                                                <ol>
+                                                                    <li>Erster Termin bei der Escribana (Notar):
+                                                                        <ul>
+                                                                            <li>Abschluss eines Vorvertrags.</li>
+                                                                            <li>Leistung einer Anzahlung.</li>
+                                                                            <li>Formelle Überprüfung des Titels durch die Escribana (Dauer: 2–4 Wochen).
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <br>
+                                                                    <li>Zweiter Termin bei der Escribana:
+                                                                        <ul>
+                                                                            <li>Unterzeichnung des Kaufvertrags.</li>
+                                                                            <li>Restzahlung des Kaufpreises.</li>
+                                                                            <li>Die Escribana startet die Eigentumsübertragung (Dauer: 4–8 Wochen).</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ol>
+                                                                <p>Nach der vollständigen Zahlung gehört das Grundstück dem neuen Eigentümer, der es
+                                                                    sofort nutzen kann.
+                                                                    Die Ausstellung des neuen Titels ist eine reine Formalität. Nach Fertigstellung
+                                                                    meldet sich die Escribana, damit
+                                                                    der neue Eigentümer das Dokument abholen kann.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 9 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingNine">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseNine"
-                                    aria-expanded="false" aria-controls="faqCollapseNine">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Welche Kosten fallen beim Kauf für die Immobilie an?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseNine" class="collapse" aria-labelledby="faqHeadingNine"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-de-9-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-de-9-collapse" aria-expanded="false"
+                                aria-controls="faq-de-9-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Welche Kosten fallen beim Kauf für die Immobilie an?
+                            </button>
+                        </h3>
+                        <div id="faq-de-9-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-de-9-heading" data-bs-parent="#faqAccordion-de">
+                            <div class="accordion-body">
                                 <p> Neben dem Kaufpreis fallen weitere sogenannte Nebenkosten an, die vom Käufer
-                                    getragen werden.<br>
-                                    Dazu zählen insbesondere die Kosten für die rechtliche Übertragung der Immobilie
-                                    ("Übertragungskosten") und falls involviert die Maklerkosten.
+                                                                    getragen werden.<br>
+                                                                    Dazu zählen insbesondere die Kosten für die rechtliche Übertragung der Immobilie
+                                                                    ("Übertragungskosten") und falls involviert die Maklerkosten.
 
-                                <h5>Übertragungskosten</h5>
-                                <p>Die Kosten für die rechtliche Übertragung des Grundstücks auf den Käufer werden beim
-                                    Notar beglichen.
-                                    Sie sind gesetzlich geregelt und liegen – abhängig vom Kaufpreis – in der Regel
-                                    zwischen <strong>ca. 1,5 % und 4,5 %</strong> des Kaufpreises.
-                                    Der Notar berechnet diese Kosten im Vorfeld und informiert dann darüber.</p>
-                                <p>Zu den Übertragungskosten zählen sämtliche Gebühren und Ausgaben, die im Zusammenhang
-                                    mit der offiziellen Umschreibung des Eigentums stehen. Dazu gehören:</p>
-                                <ul>
-                                    <li><strong>Notarkosten:</strong> Der Notar erstellt und beurkundet den Kaufvertrag
-                                        und übernimmt alle erforderlichen Schritte zur rechtlichen Eigentumsübertragung.
-                                    </li>
-                                    <li><strong>Grundbuchkosten:</strong> Diese entstehen durch die Eintragung des
-                                        Käufers als neuer Eigentümer im nationalen Grundbuch.</li>
-                                    <li><strong>Steuern:</strong> Abhängig vom Standort und Kaufpreis der Immobilie
-                                        können staatliche oder kommunale Steuern anfallen, die ebenfalls zu den
-                                        Übertragungskosten zählen.</li>
-                                    <li><strong>Verwaltungsgebühren:</strong> Dazu zählen Kosten für behördliche
-                                        Bearbeitungen, wie z. B. bei Katasterämtern oder Steuerbehörden.</li>
-                                </ul>
+                                                                <h5>Übertragungskosten</h5>
+                                                                <p>Die Kosten für die rechtliche Übertragung des Grundstücks auf den Käufer werden beim
+                                                                    Notar beglichen.
+                                                                    Sie sind gesetzlich geregelt und liegen – abhängig vom Kaufpreis – in der Regel
+                                                                    zwischen <strong>ca. 1,5 % und 4,5 %</strong> des Kaufpreises.
+                                                                    Der Notar berechnet diese Kosten im Vorfeld und informiert dann darüber.</p>
+                                                                <p>Zu den Übertragungskosten zählen sämtliche Gebühren und Ausgaben, die im Zusammenhang
+                                                                    mit der offiziellen Umschreibung des Eigentums stehen. Dazu gehören:</p>
+                                                                <ul>
+                                                                    <li><strong>Notarkosten:</strong> Der Notar erstellt und beurkundet den Kaufvertrag
+                                                                        und übernimmt alle erforderlichen Schritte zur rechtlichen Eigentumsübertragung.
+                                                                    </li>
+                                                                    <li><strong>Grundbuchkosten:</strong> Diese entstehen durch die Eintragung des
+                                                                        Käufers als neuer Eigentümer im nationalen Grundbuch.</li>
+                                                                    <li><strong>Steuern:</strong> Abhängig vom Standort und Kaufpreis der Immobilie
+                                                                        können staatliche oder kommunale Steuern anfallen, die ebenfalls zu den
+                                                                        Übertragungskosten zählen.</li>
+                                                                    <li><strong>Verwaltungsgebühren:</strong> Dazu zählen Kosten für behördliche
+                                                                        Bearbeitungen, wie z. B. bei Katasterämtern oder Steuerbehörden.</li>
+                                                                </ul>
 
-                                <h5>Maklergebühr</h5>
-                                <p> Aktuell ist kein Makler involviert, so dass keine Maklergebühren anfallen.
-                                    Sollte im Verlauf doch ein Makler beauftragt werden – unabhängig, ob durch Käufer
-                                    oder Verkäufer – übernimmt
-                                    der Käufer die entsprechenden Gebühren.</p>
+                                                                <h5>Maklergebühr</h5>
+                                                                <p> Aktuell ist kein Makler involviert, so dass keine Maklergebühren anfallen.
+                                                                    Sollte im Verlauf doch ein Makler beauftragt werden – unabhängig, ob durch Käufer
+                                                                    oder Verkäufer – übernimmt
+                                                                    der Käufer die entsprechenden Gebühren.</p>
                             </div>
                         </div>
                     </div>
 
-
                     <!-- FAQ 10 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingTen">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseTen"
-                                    aria-expanded="false" aria-controls="faqCollapseTen">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Müssen Kaufverträge in Spanisch abgeschlossen werden?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseTen" class="collapse" aria-labelledby="faqHeadingTen"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-de-10-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-de-10-collapse" aria-expanded="false"
+                                aria-controls="faq-de-10-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Müssen Kaufverträge in Spanisch abgeschlossen werden?
+                            </button>
+                        </h3>
+                        <div id="faq-de-10-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-de-10-heading" data-bs-parent="#faqAccordion-de">
+                            <div class="accordion-body">
                                 Ja, in Paraguay müssen Kaufverträge in spanischer Sprache erstellt und von beiden
-                                Parteien verstanden werden,
-                                um rechtswirksam zu sein. Falls Spanisch nicht sicher beherrscht wird, sollte ein
-                                staatlich geprüfter Übersetzer hinzugezogen werden.
-                                Die Kosten hierfür sind abhängig von der Anfahrt und der Dauer des Termins.
+                                                                Parteien verstanden werden,
+                                                                um rechtswirksam zu sein. Falls Spanisch nicht sicher beherrscht wird, sollte ein
+                                                                staatlich geprüfter Übersetzer hinzugezogen werden.
+                                                                Die Kosten hierfür sind abhängig von der Anfahrt und der Dauer des Termins.
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <section id="price" class="faq section-bg">
@@ -858,6 +826,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <section id="contact" class="contact">
@@ -880,9 +849,9 @@
                         hx-disabled-elt="button[type=submit], input[type=submit]"
                         @htmx:configRequest.window="configRequest($event)"
                         @htmx:beforeRequest.window="beforeRequest($event)"
-                        @htmx:afterRequest.window="afterRequest($event)" action="" method="post" class="php-email-form">
+                        @htmx:afterRequest.window="afterRequest($event)" action="../cgi-bin/contact.py" method="post" class="php-email-form">
 
-                        <div class="form-row">
+                        <div class="row">
                             <div class="col-lg-6 form-group">
                                 <input type="text" name="name" class="form-control" id="name" placeholder="Name"
                                     data-rule="minlen:4" data-msg="Bitte geben Sie mindestens 4 Zeichen ein." />
@@ -931,7 +900,6 @@
                     </form>
                     <p class="form-status" x-data x-text="$store.fg.status" role="status" aria-live="polite"></p>
                 </div>
-            </div>
             </div>
         </section>
 
@@ -1010,7 +978,6 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
     </main>
     <footer id="footer">
@@ -1029,10 +996,7 @@
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="../assets/vendor/jquery-sticky/jquery.sticky.js"></script>
     <script src="../assets/vendor/venobox/venobox.min.js"></script>
-    <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
     <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../assets/vendor/aos/aos.js"></script>
     <script src="../assets/js/main.js"></script>

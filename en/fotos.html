@@ -78,13 +78,13 @@
 
 <body>
     <header id="header">
-        <div class="container">
-            <div class="logo float-left">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
                 <h1 class="text-light"><a href="https://www.granjadelsol.com"><span>Granja del Sol</span></a></h1>
             </div>
-            <nav class="nav-menu float-right d-none d-lg-block">
+            <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li class="drop-down"><a href="">Language</a>
+                    <li class="dropdown"><a href="#"><span>Language</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="../de/fotos.html">Deutsch</a></li>
                             <li><a href="../en/fotos.html">English</a></li>
@@ -92,8 +92,8 @@
                             <li><a href="../pt/fotos.html">Portugu&ecirc;s</a></li>
                         </ul>
                     </li>
-                    <li class="active"><a href="#header">Home</a></li>
-                    <li class="drop-down"><a href="">Property Details</a>
+                    <li class="active"><a href="index.html#header">Home</a></li>
+                    <li class="dropdown"><a href="#"><span>Property Details</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="index.html#location">Location</a></li>
                             <li><a href="index.html#property">Land</a></li>
@@ -107,6 +107,7 @@
                     <li><a href="index.html#price">Price</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <i class="mobile-nav-toggle d-lg-none bi bi-list" aria-label="Toggle navigation"></i>
             </nav>
         </div>
     </header>
@@ -434,7 +435,7 @@
                     <div class="col-lg-12 php-email-form">
                         <p>Interested in this beautiful property or have any questions? Get in touch with us!</p>
                         <form id="contactForm" action="../cgi-bin/contact.py" role="form" class="php-email-form">
-                            <div class="form-row">
+                            <div class="row">
                                 <div class="col-lg-6 form-group">
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Name"
                                         data-rule="minlen:4" data-msg="Please enter at least 4 characters." />
@@ -487,8 +488,8 @@
     <footer id="footer">
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span><a href="https://andreploeger.com" target="_blank"></a>Andr&eacute;
-                        Pl&ouml;ger</a></span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span><a href="https://andreploeger.com" target="_blank">Andr&eacute;
+                            Pl&ouml;ger</a></span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 Template designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a> | Favicons
@@ -500,12 +501,8 @@
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
     <script src="../assets/vendor/php-email-form/validate.js"></script>
-    <script src="../assets/vendor/jquery-sticky/jquery.sticky.js"></script>
     <script src="../assets/vendor/venobox/venobox.min.js"></script>
-    <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="../assets/vendor/counterup/counterup.min.js"></script>
     <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../assets/vendor/aos/aos.js"></script>
     <script src="../assets/js/main.js"></script>

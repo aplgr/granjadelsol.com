@@ -94,16 +94,13 @@
 
 <body>
     <header id="header">
-        <div class="container">
-            <div class="logo float-left">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
                 <h1 class="text-light"><a href="https://www.granjadelsol.com/"><span>Granja del Sol</span></a></h1>
             </div>
-            <nav class="nav-menu float-right d-none d-lg-block">
+            <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li class="drop-down">
-                        <a href="">
-                            <i class="bi bi-translate"></i> Idioma
-                        </a>
+                    <li class="dropdown"><a href="#"><span><i class="bi bi-translate"></i> Idioma</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="../de/index.html" data-lang="de" hreflang="de">Deutsch</a></li>
                             <li><a href="../en/index.html" data-lang="en" hreflang="en">English</a></li>
@@ -111,7 +108,7 @@
                             <li><a href="../pt/index.html" data-lang="pt" hreflang="pt">Portugu&ecirc;s</a></li>
                         </ul>
                     </li>
-                    <li class="drop-down"><a href="">Detalhes do Imóvel</a>
+                    <li class="dropdown"><a href="#"><span>Detalhes do Imóvel</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="#location">Localização</a></li>
                             <li><a href="#property">Terreno</a></li>
@@ -124,13 +121,14 @@
                     <!--<li><a href="#price">Preço</a></li>-->
                     <li><a href="#contact">Contato</a></li>
                 </ul>
+                <i class="mobile-nav-toggle d-lg-none bi bi-list" aria-label="Toggle navigation"></i>
             </nav>
         </div>
     </header>
     <section id="hero">
         <div class="hero-container">
-            <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators" id="hero-carousel-indicators"></div>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active"
                         style="background-image: url('../assets/img/slide/grundstueck_allg.jpg');">
@@ -148,6 +146,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <main id="main">
@@ -184,11 +183,10 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
         <section id="location" class="about">
             <div class="container">
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 video-box">
                         <a href="https://maps.app.goo.gl/PPgRJ4K8pMW521oRA" target="_blank">
                             <img src="../assets/img/Grundstueck_alle/Lage2.jpg" class="img-fluid"
@@ -198,7 +196,6 @@
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="section-title">
                             <h2>Localização</h2>
-                            <p>
                             <p>José Fassardi é uma cidade pequena com cerca de 5.100 habitantes (dados de 2022) e está
                                 localizada no departamento de Guairá.</p><br>
                             <p>O terreno está situado ao norte do centro da cidade, em uma área tranquila e rural,
@@ -206,8 +203,7 @@
                                 O acesso se dá por uma estrada secundária que é trafegável em todas as condições
                                 climáticas.
                                 Nas proximidades há pequenos comércios (despensas) para atender às necessidades do dia a
-                                dia.</p>
-                            </p><br>
+                                dia.</p><br>
                             <p>O centro de José Fassardi fica a apenas 2 km de distância. Lá, você encontra diversas
                                 opções de compras, serviços médicos, além de escolas de ensino fundamental e médio.
                                 Também há um terminal de ônibus central, com linhas diárias para diferentes destinos,
@@ -224,7 +220,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-tick-mark"></i></div>
@@ -272,7 +268,7 @@
         </section>
         <section id="property" class="about">
             <div class="container">
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 video-box">
                         <a href="../assets/img/Grundstueck_alle/Grundstueck.webp" target="_blank">
                             <img src="../assets/img/Grundstueck_alle/Grundstueck.webp" class="img-fluid"
@@ -295,7 +291,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-tree"></i></div>
@@ -351,7 +347,7 @@
         </section>
         <section id="house" class="about">
             <div class="container">
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 video-box">
                         <a href="../assets/img/Grundstueck_alle/Haus.webp" target="_blank">
                             <img src="../assets/img/Grundstueck_alle/Haus.webp" class="img-fluid" alt="Vista da casa"
@@ -389,7 +385,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
+                <div class="row g-0">
                     <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
                         <div class="icon-box">
                             <div class="icon"><i class="icofont-home"></i></div>
@@ -509,285 +505,264 @@
                     <h2>Perguntas Frequentes - Nossas Respostas</h2>
                 </div>
 
-                <div id="faqAccordion" class="accordion">
+                <div id="faqAccordion-pt" class="accordion faq-accordion">
                     <!-- FAQ 1 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingOne">
-                            <h5
-                                class="mb-0 d-flex justify-content-between align-items-center text-decoration-none flex-grow-1">
-                                <a class="collapsed d-flex align-items-center" style="color: #5c768d;"
-                                    data-toggle="collapse" href="#faqCollapseOne" aria-expanded="false"
-                                    aria-controls="faqCollapseOne">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Existem mais fotos do terreno e da casa?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseOne" class="collapse" aria-labelledby="faqHeadingOne"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-pt-1-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-pt-1-collapse" aria-expanded="false"
+                                aria-controls="faq-pt-1-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Existem mais fotos do terreno e da casa?
+                            </button>
+                        </h3>
+                        <div id="faq-pt-1-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-pt-1-heading" data-bs-parent="#faqAccordion-pt">
+                            <div class="accordion-body">
                                 Sim! Mais fotos do terreno e da casa podem ser encontradas em nossa <a
-                                    href="fotos.html">galeria de fotos</a>.
+                                                                    href="fotos.html">galeria de fotos</a>.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 2 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingTwo">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseTwo"
-                                    aria-expanded="false" aria-controls="faqCollapseTwo">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Para quem este imóvel é indicado?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseTwo" class="collapse" aria-labelledby="faqHeadingTwo"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-pt-2-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-pt-2-collapse" aria-expanded="false"
+                                aria-controls="faq-pt-2-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Para quem este imóvel é indicado?
+                            </button>
+                        </h3>
+                        <div id="faq-pt-2-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-pt-2-heading" data-bs-parent="#faqAccordion-pt">
+                            <div class="accordion-body">
                                 O imóvel é ideal para:
-                                <ul>
-                                    <li>Pessoas que buscam um lugar seguro ou um “Plano B” em tempos incertos.</li>
-                                    <li>Pessoas que querem mais contato com a natureza, tranquilidade e espaço.</li>
-                                    <li>Pessoas que desejam um recomeço ou experimentar um novo estilo de vida.</li>
-                                    <br>
-                                    <li>Famílias ou grupos que desejam criar uma pequena comunidade.</li>
-                                    <li>Autossuficiência, pequena fazenda ou uso agrícola.</li>
-                                    <li>Projetos de ecoturismo, retiros, pousadas para caminhantes ou nômades digitais.
-                                    </li>
-                                    <li>Investidores.</li>
-                                </ul>
+                                                                <ul>
+                                                                    <li>Pessoas que buscam um lugar seguro ou um “Plano B” em tempos incertos.</li>
+                                                                    <li>Pessoas que querem mais contato com a natureza, tranquilidade e espaço.</li>
+                                                                    <li>Pessoas que desejam um recomeço ou experimentar um novo estilo de vida.</li>
+                                                                    <br>
+                                                                    <li>Famílias ou grupos que desejam criar uma pequena comunidade.</li>
+                                                                    <li>Autossuficiência, pequena fazenda ou uso agrícola.</li>
+                                                                    <li>Projetos de ecoturismo, retiros, pousadas para caminhantes ou nômades digitais.
+                                                                    </li>
+                                                                    <li>Investidores.</li>
+                                                                </ul>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 3 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingThree">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseThree"
-                                    aria-expanded="false" aria-controls="faqCollapseThree">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Quais são os custos de manutenção?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseThree" class="collapse" aria-labelledby="faqHeadingThree"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-pt-3-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-pt-3-collapse" aria-expanded="false"
+                                aria-controls="faq-pt-3-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Quais são os custos de manutenção?
+                            </button>
+                        </h3>
+                        <div id="faq-pt-3-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-pt-3-heading" data-bs-parent="#faqAccordion-pt">
+                            <div class="accordion-body">
                                 Existe um <strong>imposto predial anual</strong>. Em 2026, o valor foi de 305.600 PYG (~
-                                37.80 Euros).
-                                <br>Esse valor depende das regras locais e pode mudar um pouco a cada ano.
-                                <p>A <strong>energia elétrica</strong> vem da fornecedora estatal ANDE a 310 PYG por kWh
-                                    (~ 0,04 Euros). Fora isso, não há custos fixos regulares. (Situação: 05/2025)</p>
+                                                                37.80 Euros).
+                                                                <br>Esse valor depende das regras locais e pode mudar um pouco a cada ano.
+                                                                <p>A <strong>energia elétrica</strong> vem da fornecedora estatal ANDE a 310 PYG por kWh
+                                                                    (~ 0,04 Euros). Fora isso, não há custos fixos regulares. (Situação: 05/2025)</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 4 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingFour">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseFour"
-                                    aria-expanded="false" aria-controls="faqCollapseFour">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Como é o solo?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseFour" class="collapse" aria-labelledby="faqHeadingFour"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-pt-4-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-pt-4-collapse" aria-expanded="false"
+                                aria-controls="faq-pt-4-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Como é o solo?
+                            </button>
+                        </h3>
+                        <div id="faq-pt-4-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-pt-4-heading" data-bs-parent="#faqAccordion-pt">
+                            <div class="accordion-body">
                                 O terreno tem solo argiloso e fértil, excelente para uso agrícola.
-                                A boa retenção de água garante umidade estável, especialmente nos meses quentes de
-                                verão.
-                                Comparado a outras regiões do Paraguai, onde solos arenosos perdem água rapidamente,
-                                esta propriedade oferece uma base especialmente vantajosa para irrigação eficiente.
-                                Além disso, a horta já foi enriquecida com esterco, melhorando ainda mais a qualidade do
-                                solo.
+                                                                A boa retenção de água garante umidade estável, especialmente nos meses quentes de
+                                                                verão.
+                                                                Comparado a outras regiões do Paraguai, onde solos arenosos perdem água rapidamente,
+                                                                esta propriedade oferece uma base especialmente vantajosa para irrigação eficiente.
+                                                                Além disso, a horta já foi enriquecida com esterco, melhorando ainda mais a qualidade do
+                                                                solo.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 5 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingFive">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseFive"
-                                    aria-expanded="false" aria-controls="faqCollapseFive">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Há vizinhos ou é um local isolado?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseFive" class="collapse" aria-labelledby="faqHeadingFive"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-pt-5-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-pt-5-collapse" aria-expanded="false"
+                                aria-controls="faq-pt-5-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Há vizinhos ou é um local isolado?
+                            </button>
+                        </h3>
+                        <div id="faq-pt-5-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-pt-5-heading" data-bs-parent="#faqAccordion-pt">
+                            <div class="accordion-body">
                                 O terreno está localizado em uma área rural.
-                                Os dois lotes vizinhos não são habitados.
-                                Vizinhos paraguaios vivem a cerca de 200m.
-                                Na região de José Fassardi, algumas famílias alemãs também se estabeleceram.
+                                                                Os dois lotes vizinhos não são habitados.
+                                                                Vizinhos paraguaios vivem a cerca de 200m.
+                                                                Na região de José Fassardi, algumas famílias alemãs também se estabeleceram.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 6 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingSix">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseSix"
-                                    aria-expanded="false" aria-controls="faqCollapseSix">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    O terreno tem escritura?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseSix" class="collapse" aria-labelledby="faqHeadingSix"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-pt-6-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-pt-6-collapse" aria-expanded="false"
+                                aria-controls="faq-pt-6-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                O terreno tem escritura?
+                            </button>
+                        </h3>
+                        <div id="faq-pt-6-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-pt-6-heading" data-bs-parent="#faqAccordion-pt">
+                            <div class="accordion-body">
                                 Sim, a escritura do imóvel está disponível.
-                                Assim, a transferência da propriedade é possível imediatamente.
+                                                                Assim, a transferência da propriedade é possível imediatamente.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 7 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingSeven">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseSeven"
-                                    aria-expanded="false" aria-controls="faqCollapseSeven">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    O que exatamente significa a escritura?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseSeven" class="collapse" aria-labelledby="faqHeadingSeven"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-pt-7-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-pt-7-collapse" aria-expanded="false"
+                                aria-controls="faq-pt-7-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                O que exatamente significa a escritura?
+                            </button>
+                        </h3>
+                        <div id="faq-pt-7-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-pt-7-heading" data-bs-parent="#faqAccordion-pt">
+                            <div class="accordion-body">
                                 É o documento oficial que mostra quem é o proprietário legal do terreno.
-                                Ele é necessário para vender ou transferir a propriedade.
-                                Sem ele, não é possível realizar uma venda legal.
+                                                                Ele é necessário para vender ou transferir a propriedade.
+                                                                Sem ele, não é possível realizar uma venda legal.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 8 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingEight">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseEight"
-                                    aria-expanded="false" aria-controls="faqCollapseEight">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Como funciona o processo de compra?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseEight" class="collapse" aria-labelledby="faqHeadingEight"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-pt-8-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-pt-8-collapse" aria-expanded="false"
+                                aria-controls="faq-pt-8-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Como funciona o processo de compra?
+                            </button>
+                        </h3>
+                        <div id="faq-pt-8-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-pt-8-heading" data-bs-parent="#faqAccordion-pt">
+                            <div class="accordion-body">
                                 O processo de compra no Paraguai tem algumas etapas:
-                                <ol>
-                                    <li>Primeira reunião com o tabelião:
-                                        <ul>
-                                            <li>Assinar um contrato preliminar.</li>
-                                            <li>Pagar um sinal.</li>
-                                            <li>O tabelião verifica os documentos de propriedade (leva cerca de 2 a 4
-                                                semanas).</li>
-                                        </ul>
-                                    </li>
-                                    <br>
-                                    <li>Segunda reunião com o tabelião:
-                                        <ul>
-                                            <li>Assinar o contrato de compra.</li>
-                                            <li>Pagar o restante do valor.</li>
-                                            <li>O tabelião inicia a transferência de propriedade (leva cerca de 4 a 8
-                                                semanas).</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                                <p>Após o pagamento total, o imóvel já pertence ao novo dono, que pode usá-lo
-                                    imediatamente.
-                                    A emissão da nova escritura é apenas uma formalidade. Quando finalizada, a Escribana
-                                    entrará em contato com o novo proprietário para entregar o documento.</p>
+                                                                <ol>
+                                                                    <li>Primeira reunião com o tabelião:
+                                                                        <ul>
+                                                                            <li>Assinar um contrato preliminar.</li>
+                                                                            <li>Pagar um sinal.</li>
+                                                                            <li>O tabelião verifica os documentos de propriedade (leva cerca de 2 a 4
+                                                                                semanas).</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <br>
+                                                                    <li>Segunda reunião com o tabelião:
+                                                                        <ul>
+                                                                            <li>Assinar o contrato de compra.</li>
+                                                                            <li>Pagar o restante do valor.</li>
+                                                                            <li>O tabelião inicia a transferência de propriedade (leva cerca de 4 a 8
+                                                                                semanas).</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ol>
+                                                                <p>Após o pagamento total, o imóvel já pertence ao novo dono, que pode usá-lo
+                                                                    imediatamente.
+                                                                    A emissão da nova escritura é apenas uma formalidade. Quando finalizada, a Escribana
+                                                                    entrará em contato com o novo proprietário para entregar o documento.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 9 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingNine">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseNine"
-                                    aria-expanded="false" aria-controls="faqCollapseNine">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Quais custos estão envolvidos na compra?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseNine" class="collapse" aria-labelledby="faqHeadingNine"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-pt-9-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-pt-9-collapse" aria-expanded="false"
+                                aria-controls="faq-pt-9-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Quais custos estão envolvidos na compra?
+                            </button>
+                        </h3>
+                        <div id="faq-pt-9-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-pt-9-heading" data-bs-parent="#faqAccordion-pt">
+                            <div class="accordion-body">
                                 <p>Além do preço de compra, há outros custos adicionais que são suportados pelo
-                                    comprador.
-                                    <br>Estes incluem, em particular, os custos da transferência legal do imóvel
-                                    (“custos de transferência”) e, se aplicável, os custos do corretor.
-                                </p>
+                                                                    comprador.
+                                                                    <br>Estes incluem, em particular, os custos da transferência legal do imóvel
+                                                                    (“custos de transferência”) e, se aplicável, os custos do corretor.
+                                                                </p>
 
-                                <h5>Custos de Transferência</h5>
-                                <p>São os custos oficiais para transferir o terreno ao novo proprietário. Eles são pagos
-                                    no cartório e geralmente variam entre <strong>cerca de 1,5% e 4,5%</strong> do valor
-                                    da compra. O tabelião fará o cálculo antecipadamente e explicará em detalhes.</p>
-                                <p>Incluem, por exemplo:</p>
-                                <ul>
-                                    <li><strong>Honorários do tabelião:</strong> Preparação e validação do contrato de
-                                        compra e da transferência legal.</li>
-                                    <li><strong>Taxas do registro de imóveis:</strong> Registro do novo proprietário no
-                                        cartório nacional.</li>
-                                    <li><strong>Impostos:</strong> Dependendo da localização e do valor da compra, podem
-                                        existir impostos estaduais ou municipais.</li>
-                                    <li><strong>Taxas administrativas:</strong> Por exemplo, em repartições cadastrais
-                                        ou fiscais.</li>
-                                </ul>
+                                                                <h5>Custos de Transferência</h5>
+                                                                <p>São os custos oficiais para transferir o terreno ao novo proprietário. Eles são pagos
+                                                                    no cartório e geralmente variam entre <strong>cerca de 1,5% e 4,5%</strong> do valor
+                                                                    da compra. O tabelião fará o cálculo antecipadamente e explicará em detalhes.</p>
+                                                                <p>Incluem, por exemplo:</p>
+                                                                <ul>
+                                                                    <li><strong>Honorários do tabelião:</strong> Preparação e validação do contrato de
+                                                                        compra e da transferência legal.</li>
+                                                                    <li><strong>Taxas do registro de imóveis:</strong> Registro do novo proprietário no
+                                                                        cartório nacional.</li>
+                                                                    <li><strong>Impostos:</strong> Dependendo da localização e do valor da compra, podem
+                                                                        existir impostos estaduais ou municipais.</li>
+                                                                    <li><strong>Taxas administrativas:</strong> Por exemplo, em repartições cadastrais
+                                                                        ou fiscais.</li>
+                                                                </ul>
 
-                                <h5>Honorários do corretor imobiliário</h5>
-                                <p>Atualmente, não há nenhum corretor imobiliário envolvido, pelo que não há honorários
-                                    do corretor imobiliário.
-                                    Caso, no decorrer do processo, um corretor imobiliário seja contratado –
-                                    independentemente de ser pelo comprador ou pelo vendedor –,
-                                    o comprador arcará com as custos correspondentes.</p>
+                                                                <h5>Honorários do corretor imobiliário</h5>
+                                                                <p>Atualmente, não há nenhum corretor imobiliário envolvido, pelo que não há honorários
+                                                                    do corretor imobiliário.
+                                                                    Caso, no decorrer do processo, um corretor imobiliário seja contratado –
+                                                                    independentemente de ser pelo comprador ou pelo vendedor –,
+                                                                    o comprador arcará com as custos correspondentes.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 10 -->
-                    <div class="card">
-                        <div class="card-header" id="faqHeadingTen">
-                            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                                <a class="collapsed d-flex align-items-center text-decoration-none flex-grow-1"
-                                    style="color: #5c768d;" data-toggle="collapse" href="#faqCollapseTen"
-                                    aria-expanded="false" aria-controls="faqCollapseTen">
-                                    <i class="bi bi-question-circle-fill mr-2"></i>
-                                    Os contratos precisam estar em espanhol?
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="faqCollapseTen" class="collapse" aria-labelledby="faqHeadingTen"
-                            data-parent="#faqAccordion">
-                            <div class="card-body">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq-pt-10-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-pt-10-collapse" aria-expanded="false"
+                                aria-controls="faq-pt-10-collapse">
+                                <i class="bi bi-question-circle-fill me-2"></i>
+                                Os contratos precisam estar em espanhol?
+                            </button>
+                        </h3>
+                        <div id="faq-pt-10-collapse" class="accordion-collapse collapse"
+                            aria-labelledby="faq-pt-10-heading" data-bs-parent="#faqAccordion-pt">
+                            <div class="accordion-body">
                                 Sim, no Paraguai os contratos devem estar redigidos em espanhol e devem ser
-                                compreendidos por ambas as partes para serem válidos.
-                                Caso você não fale espanhol bem, é recomendado contar com um tradutor juramentado.
-                                Os custos dependem da distância e da duração da reunião.
+                                                                compreendidos por ambas as partes para serem válidos.
+                                                                Caso você não fale espanhol bem, é recomendado contar com um tradutor juramentado.
+                                                                Os custos dependem da distância e da duração da reunião.
                             </div>
                         </div>
                     </div>
@@ -825,6 +800,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <section id="contact" class="contact">
             <div class="container">
@@ -846,10 +822,10 @@
                             hx-disabled-elt="button[type=submit], input[type=submit]"
                             @htmx:configRequest.window="configRequest($event)"
                             @htmx:beforeRequest.window="beforeRequest($event)"
-                            @htmx:afterRequest.window="afterRequest($event)" action="" method="post"
+                            @htmx:afterRequest.window="afterRequest($event)" action="../cgi-bin/contact.py" method="post"
                             class="php-email-form">
 
-                            <div class="form-row">
+                            <div class="row">
                                 <div class="col-lg-6 form-group">
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Nome"
                                         data-rule="minlen:4" data-msg="Por favor, insira pelo menos 4 caracteres." />
@@ -970,10 +946,6 @@
                 </div>
             </div>
         </section>
-
-
-
-        </section>
     </main>
     <footer id="footer">
         <div class="container">
@@ -991,10 +963,7 @@
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="../assets/vendor/jquery-sticky/jquery.sticky.js"></script>
     <script src="../assets/vendor/venobox/venobox.min.js"></script>
-    <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
     <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../assets/vendor/aos/aos.js"></script>
     <script src="../assets/js/main.js"></script>

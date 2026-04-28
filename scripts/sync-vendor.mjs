@@ -17,12 +17,36 @@ const mappings = [
     {
         type: "dir",
         from: "node_modules/bootstrap/dist/css",
-        to: "assets/vendor/bootstrap/css"
+        to: "assets/vendor/bootstrap/css",
+        keep: [
+            "bootstrap-grid.css",
+            "bootstrap-grid.css.map",
+            "bootstrap-grid.min.css",
+            "bootstrap-grid.min.css.map",
+            "bootstrap-reboot.css",
+            "bootstrap-reboot.css.map",
+            "bootstrap-reboot.min.css",
+            "bootstrap-reboot.min.css.map",
+            "bootstrap.css",
+            "bootstrap.css.map",
+            "bootstrap.min.css",
+            "bootstrap.min.css.map"
+        ]
     },
     {
         type: "dir",
         from: "node_modules/bootstrap/dist/js",
-        to: "assets/vendor/bootstrap/js"
+        to: "assets/vendor/bootstrap/js",
+        keep: [
+            "bootstrap.bundle.js",
+            "bootstrap.bundle.js.map",
+            "bootstrap.bundle.min.js",
+            "bootstrap.bundle.min.js.map",
+            "bootstrap.js",
+            "bootstrap.js.map",
+            "bootstrap.min.js",
+            "bootstrap.min.js.map"
+        ]
     },
     {
         type: "file",
@@ -83,26 +107,6 @@ const mappings = [
         type: "file",
         from: "node_modules/aos/dist/aos.js",
         to: "assets/vendor/aos/aos.js"
-    },
-    {
-        type: "file",
-        from: "node_modules/jquery.easing/jquery.easing.min.js",
-        to: "assets/vendor/jquery.easing/jquery.easing.min.js"
-    },
-    {
-        type: "file",
-        from: "node_modules/jquery-sticky/jquery.sticky.js",
-        to: "assets/vendor/jquery-sticky/jquery.sticky.js"
-    },
-    {
-        type: "file",
-        from: "node_modules/waypoints/lib/jquery.waypoints.min.js",
-        to: "assets/vendor/waypoints/jquery.waypoints.min.js"
-    },
-    {
-        type: "file",
-        from: "node_modules/jquery.counterup/jquery.counterup.min.js",
-        to: "assets/vendor/counterup/counterup.min.js"
     },
     {
         type: "file",
@@ -206,11 +210,27 @@ function copyDir(relativeFrom, relativeTo) {
     console.log(`Copied directory: ${relativeFrom} -> ${relativeTo}`);
 }
 
+function pruneDir(relativeTo, keepFiles) {
+    const to = fullPath(relativeTo);
+    const keep = new Set(keepFiles);
+
+    for (const entry of fs.readdirSync(to, { withFileTypes: true })) {
+        const targetEntry = path.join(to, entry.name);
+
+        if (entry.isFile() && !keep.has(entry.name)) {
+            fs.rmSync(targetEntry);
+        }
+    }
+}
+
 for (const mapping of mappings) {
     if (mapping.type === "file") {
         copyFile(mapping.from, mapping.to);
     } else if (mapping.type === "dir") {
         copyDir(mapping.from, mapping.to);
+        if (mapping.keep) {
+            pruneDir(mapping.to, mapping.keep);
+        }
     } else {
         throw new Error(`Unsupported mapping type: ${mapping.type}`);
     }
