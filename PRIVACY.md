@@ -17,11 +17,9 @@ Zweck ist die Bearbeitung Ihrer Anfrage. Die Übertragung erfolgt per HTTPS an
 `https://api.granjadelsol.com`. Die Angaben werden ausschließlich zur Beantwortung Ihrer
 Nachricht verwendet und nicht zu Werbezwecken weitergegeben.
 
-## Webanalyse (Matomo)
-Unter der Subdomain **m.granjadelsol.com** betreiben wir Matomo zur Auswertung anonymer
-Nutzungsdaten. Je nach Konfiguration werden dabei Cookies vermieden oder auf ein Minimum
-reduziert. Sie können der Reichweitenmessung jederzeit widersprechen (Opt-Out) – Details
-auf der separaten Datenschutzseite der Analyse-Subdomain.
+## Webanalyse (Umami)
+Diese Website nutzt Umami Analytics über für privacy-freundliche
+Nutzungsstatistiken. 
 
 ## Rechte der betroffenen Personen (DSGVO)
 Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
