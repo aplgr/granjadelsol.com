@@ -1263,6 +1263,35 @@ section {
     animation: animate-loading 1s linear infinite;
 }
 
+.contact .form-status {
+    margin: 15px 0 0;
+    min-height: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.contact .form-status:empty {
+    margin-top: 0;
+    min-height: 0;
+}
+
+.contact .form-status.is-sending {
+    color: #428bca;
+}
+
+.contact .form-status.is-success {
+    color: #1f7a45;
+}
+
+.contact .form-status.is-invalid,
+.contact .form-status.is-too-fast,
+.contact .form-status.is-cooldown,
+.contact .form-status.is-duplicate,
+.contact .form-status.is-network-error,
+.contact .form-status.is-error {
+    color: #b02a37;
+}
+
 .contact .php-email-form input,
 .contact .php-email-form textarea,
 .contact .php-email-form select {

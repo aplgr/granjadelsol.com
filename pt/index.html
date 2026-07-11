@@ -1082,23 +1082,21 @@
                             </p>
                         </div>
                         <div class="col-lg-12 php-email-form">
-                            <form @htmx:afterrequest.window="afterRequest($event)"
-                                @htmx:beforerequest.window="beforeRequest($event)"
-                                @htmx:configrequest.window="configRequest($event)" action="../cgi-bin/contact.py"
+                            <form @change="clearStatus()" @htmx:after-request.window="afterRequest($event)"
+                                @htmx:before-request.window="beforeRequest($event)"
+                                @htmx:config-request.window="configRequest($event)"
+                                @htmx:send-error.window="networkError($event)"
+                                @htmx:timeout.window="networkError($event)" @input="clearStatus()"
                                 class="php-email-form" hx-disabled-elt="button[type=submit], input[type=submit]"
                                 hx-encoding="json" hx-ext="json-enc" hx-post="https://api.granjadelsol.com/contact"
-                                hx-swap="none" method="post" x-data="formGuard()" x-init="init()">
+                                hx-swap="none" hx-sync="this:drop" method="post" novalidate x-data="formGuard()">
                                 <div class="row">
                                     <div class="col-lg-6 form-group">
-                                        <input class="form-control" data-msg="Digite pelo menos 4 caracteres."
-                                            data-rule="minlen:4" id="name" name="name" placeholder="Nome" type="text" />
-                                        <div class="validate"></div>
+                                        <input class="form-control" id="name" name="name" placeholder="Nome" type="text" />
                                     </div>
                                     <div class="col-lg-6 form-group">
-                                        <input class="form-control" data-msg="Digite um endereço de e-mail válido."
-                                            data-rule="email" id="email" name="email" placeholder="E-mail"
+                                        <input class="form-control" id="email" name="email" placeholder="E-mail"
                                             type="email" />
-                                        <div class="validate"></div>
                                     </div>
                                 </div>
                                 <input aria-hidden="true" autocomplete="off" id="website" name="website"
@@ -1106,7 +1104,7 @@
                                     tabindex="-1" type="text" />
                                 <div class="form-group">
                                     <div class="selectContainer">
-                                        <select class="form-control" data-msg="Selecione uma opção." name="foundby">
+                                        <select class="form-control" name="foundby">
                                             <option value="">Como você conheceu a propriedade? </option>
                                             <option value="facebook">Facebook</option>
                                             <option value="telegram">Telegram</option>
@@ -1115,32 +1113,25 @@
                                             <option value="makler">Corretor ou imobiliária</option>
                                             <option value="other">Outro</option>
                                         </select>
-                                        <div class="validate"></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control"
-                                        data-msg="Digite pelo menos 4 caracteres para o assunto." data-rule="minlen:4"
                                         id="subject" name="subject"
                                         placeholder="Assunto (por exemplo: visita, detalhes ou uma pergunta específica)"
                                         type="text" />
-                                    <div class="validate"></div>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" data-msg="Sua mensagem" name="message"
+                                    <textarea class="form-control" name="message"
                                         placeholder="Sua mensagem" rows="5"></textarea>
-                                    <div class="validate"></div>
                                 </div>
                                 <div class="col-12 text-center">
-                                    <div class="loading">Enviando a mensagem …</div>
-                                    <div class="error-message">Algo deu errado. Tente novamente.</div>
-                                    <div class="sent-message">Muito obrigado. Entraremos em contato o mais rápido
-                                        possível.</div>
                                     <div class="text-center"><button type="submit">Enviar</button></div>
                                 </div>
                             </form>
-                            <p aria-live="polite" class="form-status" role="status" x-data="" x-text="$store.fg.status">
-                            </p>
+                            <p aria-live="polite" class="form-status" role="status"
+                                x-bind:class="$store.fg.state ? 'is-' + $store.fg.state : ''" x-data
+                                x-text="$store.fg.status"></p>
                         </div>
                     </div>
                 </section>
@@ -1244,94 +1235,6 @@
                 var htmlLang=(document.documentElement.lang||"").toLowerCase().split("-")[0];
                 if(htmlLang) localStorage.setItem("lang", htmlLang);
             } catch(e) { }
-        })();
-
-        // Contact Form
-        (function () {
-            var form=document.querySelector('form.php-email-form');
-            if(!form) return;
-
-            var boxLoading=form.querySelector('.loading');
-            var boxError=form.querySelector('.error-message');
-            var boxOk=form.querySelector('.sent-message');
-
-            var t0=Date.now();
-            var challenge=Math.random().toString(36).slice(2);
-
-            function hideAll() {
-                [boxLoading, boxError, boxOk].forEach(function (el) {
-                    if(el) {
-                        el.style.display='none';
-                        el.textContent=el.classList.contains('error-message')? '':el.textContent;
-                    }
-                });
-            }
-
-            function show(el, msg) {
-                if(!el) return;
-                if(typeof msg==='string') el.textContent=msg;
-                el.style.display='block';
-            }
-
-            function trim(x) {
-                return (x==null? '':String(x)).trim();
-            }
-
-            document.addEventListener('htmx:configRequest', function (e) {
-                if(e.target!==form) return;
-
-                if(!form.checkValidity()) {
-                    e.preventDefault();
-                    form.reportValidity?.();
-                    hideAll();
-                    show(boxError, "Confira os dados informados.");
-                    return;
-                }
-
-                var fd=new FormData(form);
-                var p=e.detail.parameters||(e.detail.parameters={});
-                p.name=trim(fd.get('name'));
-                p.email=trim(fd.get('email'));
-                p.subject=trim(fd.get('subject'))||document.title;
-                p.message=trim(fd.get('message'));
-                p.website=trim(fd.get('website')||'');
-                p._elapsed_ms=String(Math.max(1, Date.now()-t0));
-                p._js_challenge=challenge;
-
-                hideAll();
-                show(boxLoading);
-            });
-
-            document.addEventListener('htmx:afterRequest', function (e) {
-                if(e.target!==form) return;
-                hideAll();
-
-                var xhr=e.detail.xhr;
-                var status=xhr.status||0;
-                var data=null;
-                try {
-                    data=JSON.parse(xhr.responseText||'');
-                } catch(_) { }
-
-                if(status>=200&&status<300&&data&&data.ok) {
-                    show(boxOk);
-                    form.reset();
-                    t0=Date.now();
-                    return;
-                }
-
-                var msg=(data&&data.error)? data.error:
-                    (status? ('Error ('+status+')'):'network error');
-                show(boxError, msg);
-            });
-
-            document.addEventListener('htmx:sendError', function (e) {
-                if(e.target!==form) return;
-                hideAll();
-                show(boxError, "Erro de rede. Tente novamente mais tarde.");
-            });
-
-            hideAll();
         })();
     </script>
 </body>
