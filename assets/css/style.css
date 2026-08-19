@@ -386,7 +386,7 @@ h6,
 
 #hero .carousel-item::before {
     content: '';
-    background-color: rgba(13, 30, 45, 0.6);
+    background-color: rgba(13, 30, 45, 0.18);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -484,6 +484,23 @@ h6,
     background: #1c5c93;
 }
 
+@media (max-width: 576px) {
+    #hero .btn-outline-light {
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+    }
+}
+
+#hero .hero-location {
+    width: 100%;
+    margin: -15px 0 20px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
 @media (max-width: 768px) {
     #hero h2 {
         font-size: 28px;
@@ -529,6 +546,8 @@ h6,
         width: 5%;
     }
 }
+
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -954,6 +973,17 @@ section {
 
 .portfolio .portfolio-wrap img {
     transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap {
+    aspect-ratio: 16 / 10;
+}
+
+.portfolio .portfolio-wrap>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .portfolio .portfolio-wrap .portfolio-info {
