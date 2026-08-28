@@ -1048,6 +1048,24 @@ section {
     transform: scale(1.1);
 }
 
+/* Venobox: große Bilder vollständig im Viewport anzeigen */
+.vbox-content {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vbox-container img.vbox-figlio {
+    max-width: 94vw;
+    max-height: 90vh;
+    max-height: 90dvh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
 /*--------------------------------------------------------------
 # Our Team
 --------------------------------------------------------------*/
