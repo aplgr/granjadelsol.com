@@ -124,6 +124,35 @@
     font-size: 3rem;
 }
 
+.use-case-figure {
+    margin: 0;
+}
+
+.use-case-figure a {
+    display: block;
+    overflow: hidden;
+    border-radius: 0.45rem;
+    background: #fff;
+    box-shadow: 0 0.25rem 1.15rem rgba(0, 0, 0, 0.08);
+}
+
+.use-case-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.use-case-figure figcaption {
+    padding-top: 1rem;
+    color: #667784;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.use-case-figure figcaption strong {
+    color: #334955;
+}
+
 .use-case-note {
     padding: 1.25rem 1.5rem;
     border-left: 4px solid #5c768d;
