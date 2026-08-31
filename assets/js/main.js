@@ -41,6 +41,67 @@
     window.scrollTo({ top, behavior: "smooth" });
   }
 
+  function wireGermanUseCaseLinks() {
+    const language = (document.documentElement.lang || "").toLowerCase().split("-")[0];
+    const isGermanOverview = language === "de" && document.querySelector("#about0");
+    if (!isGermanOverview) return;
+
+    const useCases = [
+      {
+        heading: "Für Familien",
+        href: "familienleben.html",
+        label: "Ideen für Familien ansehen"
+      },
+      {
+        heading: "Für Investoren",
+        href: "investition-und-entwicklung.html",
+        label: "Investitions- und Entwicklungsideen ansehen"
+      },
+      {
+        heading: "Für Selbstversorger",
+        href: "selbstversorgung.html",
+        label: "Selbstversorger-Ideen ansehen"
+      }
+    ];
+
+    document.querySelectorAll("#about0 .icon-box").forEach((card) => {
+      const title = card.querySelector("h4");
+      if (!title) return;
+
+      const titleText = title.textContent.replace(/\s+/g, " ").trim();
+      const useCase = useCases.find((item) => titleText === item.heading);
+      if (!useCase || card.querySelector(".use-case-overview-link")) return;
+
+      card.style.pointerEvents = "auto";
+
+      const linkWrapper = document.createElement("p");
+      linkWrapper.className = "mt-3 mb-0";
+
+      const link = document.createElement("a");
+      link.className = "use-case-overview-link fw-semibold";
+      link.href = useCase.href;
+      link.textContent = `${useCase.label} →`;
+
+      linkWrapper.appendChild(link);
+      card.appendChild(linkWrapper);
+    });
+
+    const expansionHeading = Array.from(document.querySelectorAll("#services h4.title"))
+      .find((title) => title.textContent.trim() === "Ausbaumöglichkeiten");
+
+    if (expansionHeading) {
+      const expansionBox = expansionHeading.closest(".icon-box");
+      if (expansionBox && !expansionBox.querySelector(".use-case-expansion-links")) {
+        const links = document.createElement("p");
+        links.className = "use-case-expansion-links mt-3 mb-0";
+        links.innerHTML = '<a class="fw-semibold" href="familienleben.html#bauplaetze">Familiengerechte Ausbauideen</a>' +
+          '<span class="text-muted mx-2">·</span>' +
+          '<a class="fw-semibold" href="investition-und-entwicklung.html#gebaeude">Entwicklungsideen für die Bauflächen</a>';
+        expansionBox.appendChild(links);
+      }
+    }
+  }
+
   document.addEventListener("scroll", () => {
     toggleHeaderScrolled();
     toggleBackToTop();
@@ -105,6 +166,8 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
+
+  wireGermanUseCaseLinks();
 
   window.addEventListener("load", () => {
     if (!window.location.hash) return;
