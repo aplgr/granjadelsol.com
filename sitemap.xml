@@ -2,82 +2,231 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!--Startseiten-->
+  <!-- Startseiten -->
   <url>
     <loc>https://granjadelsol.com/de/</loc>
     <lastmod>2026-03-07</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/"/>
   </url>
   <url>
     <loc>https://granjadelsol.com/en/</loc>
     <lastmod>2026-03-07</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/"/>
   </url>
   <url>
     <loc>https://granjadelsol.com/es/</loc>
     <lastmod>2026-03-07</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/"/>
   </url>
   <url>
     <loc>https://granjadelsol.com/pt/</loc>
     <lastmod>2026-03-07</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/"/>
   </url>
 
-<!-- Fotogalerie-Seiten -->
+  <!-- Familienleben -->
+  <url>
+    <loc>https://granjadelsol.com/de/familienleben.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/familienleben.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/family-life.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/vida-familiar.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/vida-em-familia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/familienleben.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/en/family-life.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/familienleben.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/family-life.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/vida-familiar.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/vida-em-familia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/familienleben.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/es/vida-familiar.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/familienleben.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/family-life.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/vida-familiar.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/vida-em-familia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/familienleben.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/pt/vida-em-familia.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/familienleben.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/family-life.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/vida-familiar.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/vida-em-familia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/familienleben.html"/>
+  </url>
+
+  <!-- Investition und Entwicklung -->
+  <url>
+    <loc>https://granjadelsol.com/de/investition-und-entwicklung.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/investition-und-entwicklung.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/investment-and-development.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/inversion-y-desarrollo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/investimento-e-desenvolvimento.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/investition-und-entwicklung.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/en/investment-and-development.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/investition-und-entwicklung.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/investment-and-development.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/inversion-y-desarrollo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/investimento-e-desenvolvimento.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/investition-und-entwicklung.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/es/inversion-y-desarrollo.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/investition-und-entwicklung.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/investment-and-development.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/inversion-y-desarrollo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/investimento-e-desenvolvimento.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/investition-und-entwicklung.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/pt/investimento-e-desenvolvimento.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/investition-und-entwicklung.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/investment-and-development.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/inversion-y-desarrollo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/investimento-e-desenvolvimento.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/investition-und-entwicklung.html"/>
+  </url>
+
+  <!-- Selbstversorgung -->
+  <url>
+    <loc>https://granjadelsol.com/de/selbstversorgung.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/selbstversorgung.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/self-sufficiency.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/autosuficiencia.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/autossuficiencia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/selbstversorgung.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/en/self-sufficiency.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/selbstversorgung.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/self-sufficiency.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/autosuficiencia.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/autossuficiencia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/selbstversorgung.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/es/autosuficiencia.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/selbstversorgung.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/self-sufficiency.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/autosuficiencia.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/autossuficiencia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/selbstversorgung.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/pt/autossuficiencia.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/selbstversorgung.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/self-sufficiency.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/autosuficiencia.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/autossuficiencia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/selbstversorgung.html"/>
+  </url>
+
+  <!-- Natur und Artenvielfalt -->
+  <url>
+    <loc>https://granjadelsol.com/de/natur-und-artenvielfalt.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/natur-und-artenvielfalt.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/nature-and-biodiversity.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/naturaleza-y-biodiversidad.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/natureza-e-biodiversidade.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/natur-und-artenvielfalt.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/en/nature-and-biodiversity.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/natur-und-artenvielfalt.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/nature-and-biodiversity.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/naturaleza-y-biodiversidad.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/natureza-e-biodiversidade.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/natur-und-artenvielfalt.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/es/naturaleza-y-biodiversidad.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/natur-und-artenvielfalt.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/nature-and-biodiversity.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/naturaleza-y-biodiversidad.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/natureza-e-biodiversidade.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/natur-und-artenvielfalt.html"/>
+  </url>
+  <url>
+    <loc>https://granjadelsol.com/pt/natureza-e-biodiversidade.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/natur-und-artenvielfalt.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/nature-and-biodiversity.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/naturaleza-y-biodiversidad.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/natureza-e-biodiversidade.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/natur-und-artenvielfalt.html"/>
+  </url>
+
+  <!-- Fotogalerie-Seiten -->
   <url>
     <loc>https://granjadelsol.com/de/fotos.html</loc>
     <lastmod>2026-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/fotos.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/fotos.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/fotos.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/fotos.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/fotos.html"/>
   </url>
-
   <url>
     <loc>https://granjadelsol.com/en/fotos.html</loc>
     <lastmod>2026-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/fotos.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/fotos.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/fotos.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/fotos.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/fotos.html"/>
   </url>
-
   <url>
     <loc>https://granjadelsol.com/es/fotos.html</loc>
     <lastmod>2026-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/fotos.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/fotos.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/fotos.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/fotos.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/fotos.html"/>
   </url>
-
   <url>
     <loc>https://granjadelsol.com/pt/fotos.html</loc>
     <lastmod>2026-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://granjadelsol.com/de/fotos.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://granjadelsol.com/en/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://granjadelsol.com/en/fotos.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://granjadelsol.com/es/fotos.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://granjadelsol.com/pt/fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://granjadelsol.com/pt/fotos.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://granjadelsol.com/de/fotos.html"/>
   </url>
 </urlset>
