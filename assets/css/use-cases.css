@@ -85,6 +85,47 @@
     margin-bottom: 0;
 }
 
+.nature-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nature-card figure {
+    margin: 0;
+}
+
+.nature-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.nature-card figcaption {
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.9rem;
+    background: #eef3f6;
+    color: #5d6a73;
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.nature-card figcaption a {
+    color: #4c6c82;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+}
+
+.nature-card-body {
+    flex: 1;
+    padding: 1.5rem;
+}
+
 .use-case-fact-list {
     padding-left: 0;
     list-style: none;
